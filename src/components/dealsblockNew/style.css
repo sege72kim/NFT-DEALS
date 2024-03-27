@@ -1,0 +1,78 @@
+.seller-info, .recipient-info {
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.seller-info{
+    background-color: #16181c;
+	float: left;
+    left: 0;
+	min-width: 49%;
+    align-items: center;
+    padding: 20px;
+}
+.recipient-info {
+    background-color: #16181c;
+    float: right;
+    right: 0;
+	min-width: 49%;
+    align-items: center;
+    padding: 20px;
+}
+.info-text3{
+    font-size: 22px;
+    font-weight: 600;
+    padding-left:2%;
+    color: #dddee0;
+}
+
+.button-container {
+ margin: 0px 2%;
+ padding: 3% 0px;
+ 
+}
+
+.button {
+ display:flex;
+  width: 100%;
+  height: 50px;
+  background-color: #1e2024;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Добавляем отступ между кнопками */
+  transition: background-color 0.3s ease; 
+  border-radius: 10px;
+  padding: 30px 3%;
+}
+
+/* Последней кнопке убираем отступ справа */
+.button:last-child {
+  margin-right: 0;
+}
+
+/* Стили для наведения */
+.button:hover {
+  background-color: #24262b;
+}
+.buttonp{
+    margin-top:1%;
+    width: 8%;
+    height: 80%;
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    border-radius: 10px;
+}
+.buttonp:last-child {
+    margin-right: 0;
+  }
+  
+  /* Стили для наведения */
+  .buttonp:hover {
+    background-color: #d8d8d8;
+  }
