@@ -43,18 +43,17 @@
   align-items: center; 
   line-height: 50px;
   cursor: pointer;
-  margin-bottom: 10px; /* Добавляем отступ между кнопками */
+  margin-bottom: 10px;
   transition: background-color 0.3s ease; 
   border-radius: 10px;
   padding: 35px 3%;
 }
 
-/* Последней кнопке убираем отступ справа */
+
 .button:last-child {
   margin-right: 0;
 }
 
-/* Стили для наведения */
 .button:hover {
   background-color: #27292E;
 }
@@ -75,8 +74,6 @@
 .buttonp:last-child {
     margin-right: 0;
   }
-  
-  /* Стили для наведения */
   .buttonp:hover {
     background-color: #d8d8d8;
   }
@@ -92,3 +89,60 @@
     color: #dddee0;
     font-weight: Bold;
   }
+
+
+  
+
+
+
+/*Стили для модульный блоков*/
+.first-modalblock{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.modal-text{
+  font-size: 21px;
+  color: #dddee0;
+  font-weight: Bold;
+  padding-left: 1%;
+}
+.cross {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+    .cross::before,
+    .cross::after {
+        background-color: #898B8F;
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.3s ease; 
+    }
+    .cross::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .cross::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    .cross:hover::before,
+    .cross:hover::after {
+      background-color: #E9E9EB;
+    }
+
+.second-modalblock{
+  background-color: #1E2024;
+  width: 100%;
+  padding: 15px 25px;
+  color:#BEC0C6;
+  font-size: 15px;
+}
+.second-modalblock strong{
+  color:#d5d8df;
+}

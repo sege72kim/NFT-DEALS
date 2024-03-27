@@ -5,7 +5,7 @@
     position: fixed;
     top:0;
     left:0;
-    z-index: 1000;
+    z-index: 1;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -18,11 +18,10 @@
     opacity: 1;
 }
 .modal_content{
-    padding: 20px;
-    border-radius: 12px;
+    border-radius: 20px;
     background-color: #16181C;
     height: 400px;
-    width: 400px;
+    width: 26vw;
     transform: scale(0.5);
     transition:0.2s all;
 }

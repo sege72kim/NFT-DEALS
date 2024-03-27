@@ -3,7 +3,7 @@ import './style.css'
 import React, {useState} from 'react';
 const DealsblockNew = () => 
 {
-    const [modalActive,setModalActive] = useState(true);
+    const [modalActive,setModalActive] = useState(false);
     return(
         <div>
         <div className = "dealsblock">
@@ -98,7 +98,19 @@ const DealsblockNew = () =>
             </div>
         </div>
         </div>
-        <Modalnft active={modalActive} setActive={setModalActive}/>
+
+
+        <Modalnft active={modalActive} setActive={setModalActive}>
+            <div className = "first-modalblock">
+                <div className = "modal-text">
+                     NFTs for the Deal
+                </div>
+                <div className ="cross" ></div>
+            </div>
+            <div className="second-modalblock">
+                You can select up to <strong>4 NFTs</strong>
+            </div>
+        </Modalnft>
         </div>
     )
 }
