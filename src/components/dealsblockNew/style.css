@@ -101,6 +101,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  padding-bottom: 12px;
 }
 .modal-text{
   font-size: 21px;
@@ -139,10 +140,28 @@
 .second-modalblock{
   background-color: #1E2024;
   width: 100%;
-  padding: 15px 25px;
+  padding: 12px 25px;
   color:#BEC0C6;
   font-size: 15px;
 }
 .second-modalblock strong{
+  color:#d5d8df;
+}
+
+.first-modalblock2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 7px;
+}
+
+.second-modalblock2{
+  width: 100%;
+  padding: 0px 25px;
+  color:#BEC0C6;
+  font-size: 17px;
+}
+.second-modalblock2 strong{
   color:#d5d8df;
 }
