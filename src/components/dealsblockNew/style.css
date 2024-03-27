@@ -40,12 +40,13 @@
   background-color: #1e2024;
   color: #fff;
   text-align: center;
+  align-items: center; 
   line-height: 50px;
   cursor: pointer;
   margin-bottom: 10px; /* Добавляем отступ между кнопками */
   transition: background-color 0.3s ease; 
   border-radius: 10px;
-  padding: 30px 3%;
+  padding: 35px 3%;
 }
 
 /* Последней кнопке убираем отступ справа */
@@ -55,18 +56,21 @@
 
 /* Стили для наведения */
 .button:hover {
-  background-color: #24262b;
+  background-color: #27292E;
 }
 .buttonp{
-    margin-top:1%;
-    width: 8%;
-    height: 80%;
+    display:flex;
+    text-align: center;
+    margin-left: 5px;
+    width: 35px;
+    height: 35px;
     background-color: #ffffff;
     color: #fff;
-    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease; 
-    border-radius: 10px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
 }
 .buttonp:last-child {
     margin-right: 0;
@@ -75,4 +79,16 @@
   /* Стили для наведения */
   .buttonp:hover {
     background-color: #d8d8d8;
+  }
+  .plus{
+    font-weight: lighter;
+    margin-bottom:10%;
+    font-size: 40px;
+    color: black;
+  }
+  .buttontxt{
+    padding-left: 3%;
+    font-size: 20px;
+    color: #dddee0;
+    font-weight: Bold;
   }

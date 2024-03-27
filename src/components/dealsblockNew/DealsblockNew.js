@@ -52,10 +52,20 @@ const DealsblockNew = () =>
                 </div>
                 <div className="button-container">
                     <div className="button" tabIndex="0">
-                         
-                     </div>
+                        <div className="buttonp">
+                            <div className = "plus">+</div>
+                        </div>
+                        <div className="buttontxt">
+                            NFT
+                        </div>
+                    </div>
                     <div className="button" tabIndex="0">
-                         
+                        <div className="buttonp">
+                            <div className = "plus">+</div>
+                        </div>
+                        <div className="buttontxt">
+                            TON
+                        </div>
                     </div>
                  </div>
             </div>
@@ -65,11 +75,21 @@ const DealsblockNew = () =>
                     You Get
                 </div>
                 <div className="button-container">
-                    <div className="button" tabIndex="0">
-                        
-                     </div>
-                    <div className="button" tabIndex="0">
-                         
+                     <div className="button" tabIndex="0">
+                        <div className="buttonp">
+                            <div className = "plus">+</div>
+                        </div>
+                        <div className="buttontxt">
+                            NFT
+                        </div>
+                    </div>
+                     <div className="button" tabIndex="0">
+                        <div className="buttonp">
+                            <div className = "plus">+</div>
+                        </div>
+                        <div className="buttontxt">
+                            TON
+                        </div>
                     </div>
                  </div>
             </div>
