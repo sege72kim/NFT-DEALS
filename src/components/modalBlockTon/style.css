@@ -21,10 +21,10 @@
     border-radius: 20px;
     background-color: #16181C;
     height: 200px;
-    width: 26vw;
-    transform: scale(0.5);
+    width: 520px;
+    transform: translateY(100%);
     transition:0.2s all;
 }
 .modal_content2.active {
-    transform: scale(1);
+    transform: translateY(0px);
 }
