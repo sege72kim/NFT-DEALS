@@ -1,9 +1,12 @@
+import Modalnft from '../modalBlockNft/modalnft';
 import './style.css'
-
+import React, {useState} from 'react';
 const DealsblockNew = () => 
 {
+    const [modalActive,setModalActive] = useState(true);
     return(
-        <section className = "dealsblock">
+        <div>
+        <div className = "dealsblock">
         <div className="container3">
 
             <div className="info-block">
@@ -51,22 +54,22 @@ const DealsblockNew = () =>
                     You Give
                 </div>
                 <div className="button-container">
-                    <div className="button" tabIndex="0">
+                    <button className="button" onClick = {() => setModalActive(true)}>
                         <div className="buttonp">
                             <div className = "plus">+</div>
                         </div>
                         <div className="buttontxt">
                             NFT
                         </div>
-                    </div>
-                    <div className="button" tabIndex="0">
+                    </button>
+                    <button className="button" onClick = {() => setModalActive(true)}>
                         <div className="buttonp">
                             <div className = "plus">+</div>
                         </div>
                         <div className="buttontxt">
                             TON
                         </div>
-                    </div>
+                    </button>
                  </div>
             </div>
 
@@ -75,26 +78,28 @@ const DealsblockNew = () =>
                     You Get
                 </div>
                 <div className="button-container">
-                     <div className="button" tabIndex="0">
+                     <button className="button" onClick = {() => setModalActive(true)}>
                         <div className="buttonp">
                             <div className = "plus">+</div>
                         </div>
                         <div className="buttontxt">
                             NFT
                         </div>
-                    </div>
-                     <div className="button" tabIndex="0">
+                    </button>
+                     <button className="button" onClick = {() => setModalActive(true)}>
                         <div className="buttonp">
                             <div className = "plus">+</div>
                         </div>
                         <div className="buttontxt">
                             TON
                         </div>
-                    </div>
+                    </button>
                  </div>
             </div>
         </div>
-        </section>
+        </div>
+        <Modalnft active={modalActive} setActive={setModalActive}/>
+        </div>
     )
 }
 export default DealsblockNew;

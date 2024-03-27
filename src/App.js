@@ -6,7 +6,8 @@ import Dealsblock from "./components/dealsblock/Dealsblock"
 import DealsblockNew from "./components/dealsblockNew/DealsblockNew"
 
 function App() {
-  return (
+
+    return (
     <div className="App"> 
     <Navbar/>
     <Header/>
