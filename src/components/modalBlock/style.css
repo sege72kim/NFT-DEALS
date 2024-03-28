@@ -1,6 +1,6 @@
 .modal{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0,0,0,0.7);
     position: fixed;
     top:0;
@@ -17,14 +17,21 @@
     pointer-events: all;
     opacity: 1;
 }
-.modal_content2{
+.modal_content{
     border-radius: 20px;
     background-color: #16181C;
-    height: 200px;
     width: 520px;
+    min-height: 500px;
     transform: translateY(100%);
     transition:0.2s all;
 }
-.modal_content2.active {
+.modal_content.active {
     transform: translateY(0px);
+}
+@media (max-width:600px){
+    .modal_content{
+    width: 520px;
+    height: 100%;
+    }
+    
 }

@@ -1,9 +1,7 @@
 .info-block{
     background-color: #1e2024;
-	right: 0;
 	min-width: 49%;
     align-items: center;
-    width: 30%;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -37,3 +35,26 @@
 .little-text3{
     color: grey;
 }
+@media(max-width:700px){/*полностью*/
+    .info-block{
+        display: flex;
+        font-size: 12px;
+    }
+    .little-text2{
+        font-size: 15px;
+    }
+  }
+@media (max-width: 600px) {
+    .info-block{
+        width: 100%; /* Изменяем ширину блоков на 100% на маленьких экранах */
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: 10px 0px;
+        font-size: 16px;/*вот эта строчка добавлена*/
+    }
+    .little-text2{
+        font-size:20px; /*вот эта строчка добавлена*/
+    }
+    
+  }

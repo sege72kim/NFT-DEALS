@@ -1,0 +1,51 @@
+/*usersearch*/ 
+
+.nftsearchi[type="text"] {
+    margin: 15px 10px;
+    margin-bottom: 3px;
+    padding: 12px 20px;
+    width: calc(70% - 6px);
+    border: 1px solid #1e2024;
+	background-color: #1e2024;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.nftsearch{
+    display: flex;
+    justify-content: center;
+}
+.nftsearchi:hover,
+.nftsearchi:focus,
+.nftsearchi:active[type="text"]{
+    border-color: #393c44;
+}
+
+/*listitem*/
+
+.nftnameblock{
+    align-items: center;
+    display:flex;
+    background-color: #1E2024;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+.nftnameblock:hover{
+    background-color: #27292E;
+}
+
+.nfttype{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    color: #838386;
+}
+.nftname {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: #dddde6;
+}

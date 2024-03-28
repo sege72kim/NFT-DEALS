@@ -1,17 +1,31 @@
-.search-block input[type="search-text"] {
-    padding: 10px;
+.search-blocki[type="search-text"] {
+    padding: 12px;
     width: calc(100% - 6px);
     border: 1px solid #1e2024;
 	background-color: #1e2024;
-    border-radius: 15px;
+    transition: border-color 0.3s ease;
+    border-radius: 12px;
+}
+.search-blocki:hover,
+.search-blocki:focus,
+.search-blocki:active[type="text"]{
+    border-color: #4a4d57;
 }
 .search-block {
     background-color: #15181c;
-    right: 0;
 	min-width: 49%;
     align-items: center;
-    width: 30%;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 600px) {
+    .search-block {
+        width: 100%; /* Изменяем ширину блоков на 100% на маленьких экранах */
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: 10px 0px;
+        font-size: 16px;/*вот эта строчка добавлена*/
+    }
+  }

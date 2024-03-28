@@ -2,7 +2,7 @@ import './style.css'
 const InfoBlock = (props) => {
     return ( 
         <div className="info-block">
-                <div className="avatar"></div> {}
+                <img className="avatar"></img> {}
                 <div className = "content-container">
                     <p className = "little-text">{props.who}</p>
                     <h1 className = "little-text2">UserName</h1>

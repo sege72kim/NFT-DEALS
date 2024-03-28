@@ -1,15 +1,27 @@
+import React, { useState, useEffect } from 'react';
+import DealsblockMobile from './DealblockMobile';
+import DealsblockDesktop from './DealsblockDesktop';
 
-import InfoBlock from './components/Infoblock/info-block';
-import UserSearch from './components/SearchBlock/user-search';
-import './style.css'
-const Dealsblock = () => {
-    return ( 
-    <section className = "dealsblock">
-        <div className = "container3">
-        <InfoBlock who="Seller"/>
-        <UserSearch/>
-        </div>
-    </section>   
-    );
-}
-export default Dealsblock;
+const DealsBlock = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return (
+    <div>
+      {windowWidth <= 600 ? <DealsblockMobile /> : <DealsblockDesktop />}
+    </div>
+  );
+};
+
+export default DealsBlock;

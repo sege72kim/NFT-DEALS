@@ -1,6 +1,6 @@
 import React from 'react';
 import "./style.css"
-const Modalnft = ({active, setActive, children}) => {
+const Modal = ({active, setActive, children}) => {
     return (
     <div className = {active ? "modal active" : "modal"} onClick={()=> setActive(false) }>
         <div className={active ? "modal_content active" : "modal_content"} onClick = {e => e.stopPropagation()}>
@@ -9,4 +9,4 @@ const Modalnft = ({active, setActive, children}) => {
     </div>
     );
 }
-export default Modalnft;
+export default Modal;
