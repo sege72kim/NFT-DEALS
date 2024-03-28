@@ -6,9 +6,9 @@
 }
 .seller-info{
     background-color: #16181c;
-	float: left;
+	  float: left;
     left: 0;
-	min-width: 49%;
+	  min-width: 49%;
     align-items: center;
     padding: 20px;
 }
@@ -165,3 +165,5 @@
 .second-modalblock2 strong{
   color:#d5d8df;
 }
+
+
