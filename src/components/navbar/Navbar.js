@@ -1,5 +1,4 @@
 import "./style.css"
-import { TonConnectButton } from '@tonconnect/ui-react';
 function Navbar () {
     return (
         <nav className="nav">

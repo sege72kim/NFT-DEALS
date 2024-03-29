@@ -3,7 +3,6 @@ import "./styles/reset.css"
 import Navbar from "./components/navbar/Navbar"
 import Header from "./components/header/Header"
 import Dealsblock from "./components/dealsblock/Dealsblock"
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
 
 function App() {
 

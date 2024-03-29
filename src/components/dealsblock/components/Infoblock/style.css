@@ -1,11 +1,12 @@
 .info-block{
     background-color: #1e2024;
-	min-width: 49%;
+ min-width: 49%;
     align-items: center;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display:flex;
+    width:30%;
 }
 .avatar{
     width: 50px;
@@ -58,3 +59,18 @@
     }
     
   }
+@media(max-width: 500px){
+    .info-block{
+        min-width:400px;
+}
+}
+@media(max-width: 400px){
+    .info-block{
+        min-width:300px;
+}
+}
+@media(max-width: 300px){
+    .info-block{
+        min-width:200px;
+}
+}

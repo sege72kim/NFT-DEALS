@@ -49,3 +49,51 @@
     font-weight: 500;
     color: #dddde6;
 }
+/*List component*/
+
+.scrollbar1{
+    overflow: hidden; /* Скрыть стандартный скроллбар */
+    position: relative;
+    width: 100%; /* Ширина блока с прокруткой */
+    height: 340px;
+    margin: 12px 0px;
+    margin-bottom: 20px;
+}
+.scrollbar2{
+    overflow-y: auto; /* Включить вертикальную прокрутку */
+    width: 100%;
+    height: 100%;
+}
+.scrollbar2::-webkit-scrollbar {
+    display: none; /* Скрыть стандартный скроллбар в Chrome и Safari */
+  }
+  
+.scrollbar2 {
+    scrollbar-width: none; /* Скрыть стандартный скроллбар в Firefox */
+  }
+
+/*Not Found Text*/
+.ntfndnft{
+    position: relative;
+    height: 300px;
+}
+.ntfndnfttext{
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 700;
+    color: #E9E9EB;
+}
+.ntfndnfttext2{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b0b2b8;
+    font-size: 17px;
+    font-weight: 500;
+}

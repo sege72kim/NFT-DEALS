@@ -2,6 +2,7 @@ import React from 'react';
 
 function ListItem({ data }) {
   return (
+  
     <div className = "nftnameblock">
       <img className="avatar"/>
       <div className="nfttextblock">

@@ -8,6 +8,7 @@ const NftBlock = (props) => {
     const [modalActive2,setModalActive2] = useState(false);
     return (
 
+
     <div className="nftblock">
     <div className="info-text3">
         {props.giveget}
@@ -36,27 +37,28 @@ const NftBlock = (props) => {
                 <div className = "modal-text">
                      NFTs for the Deal
                 </div>
-                <div className ="cross" ></div>
+                <div className ="cross" onClick={() => setModalActive(false)}></div>
             </div>
             <div className="second-modalblock">
                 You can select up to <strong>4 NFTs</strong>
             </div>
             <div>
-            <ListComponent data={data} />
+            <ListComponent data={props.data} />
             </div>
         </Modal>
 
         <Modal active={modalActive2} setActive={setModalActive2}>
-            <div className = "first-modalblock2">
-                <div className = "modal-text">
-                     {props.text1}
-                </div>
-                <div className ="cross" ></div>
-            </div>
-            <div className="second-modalblock2">
-                    {props.text2}
-            </div>
-        </Modal>
+    <div className="first-modalblock2">
+        <div className="modal-text">
+            {props.text1}
+        </div>
+        <div className="cross" onClick={() => setModalActive2(false)}>
+        </div>
+    </div>
+    <div className="second-modalblock2">
+        {props.text2}
+    </div>
+</Modal>
 
     </div>
 );

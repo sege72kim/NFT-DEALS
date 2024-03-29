@@ -2,7 +2,6 @@ import './style.css'
 const Header = () => {
     return (
     <section className="header">
-        <div classname="container2">
                 <div className = "left-header">
                     <h1 className="header__title">
                         <strong>NFT Deals</strong>
@@ -14,7 +13,6 @@ const Header = () => {
                 <div className = "right-header">
                     <button className="rectangle-button">My NFT Deals</button>
                 </div>
-        </div>
     </section>
     );
 }

@@ -37,11 +37,28 @@ function ListComponent({ data }) {
           onBlur={handleBlur}
           placeholder="Search NFT"
         />
-
         </div>
-        {filteredData.map((item) => (
-          <ListItem key={item.id} data={item} />
-        ))}
+
+        {filteredData.length > 0 ? (       // Проверяем, есть ли элементы в отфильтрованном массиве
+        <div className="scrollbar1">
+          <div className="scrollbar2">
+            {filteredData.map((item) => (
+              <ListItem key={item.id} data={item} />
+            ))}
+          </div>
+        </div>
+      ) : (                                // Если массив пуст, отображаем другой блок
+        <div className = "ntfndnft">
+          <div className = "ntfndnfttext">
+              Not enough NFTs
+          </div> 
+          <div className = "ntfndnfttext2">
+            <p>You and the other person need to have at least one</p>
+            <p>NFT to make a deal.</p>
+          </div>
+        </div>
+      )}
+
       </div>
     );
   }
