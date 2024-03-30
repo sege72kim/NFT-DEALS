@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css'
-const UserSearch = () => {
+const UserSearch = (props) => {
     const [isFocused, setIsFocused] = useState(false); // Состояние для отслеживания фокуса
 
   const handleFocus = () => {
@@ -16,7 +16,7 @@ const UserSearch = () => {
     className={isFocused ? 'search-blocki active' : 'search-blocki'}
     onFocus={handleFocus}
     onBlur={handleBlur}
-    placeholder="Choose user for deal"/>
+    placeholder={props.textsearch}/>
     </div>
  );
 }

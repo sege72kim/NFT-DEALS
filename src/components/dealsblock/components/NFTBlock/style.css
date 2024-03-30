@@ -1,151 +1,197 @@
 .nftblock {
-    width: 30%;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #16181c;
-    left: 0;
-	  min-width: 49%;
-    align-items: center;
-    padding: 20px;
+  width: 30%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #16181c;
+  left: 0;
+  min-width: 49%;
+  align-items: center;
+  padding: 20px;
 }
 
 .info-text3{
-    font-size: 22px;
-    font-weight: 600;
-    padding-left:2%;
-    color: #dddee0;
+  font-size: 22px;
+  font-weight: 600;
+  padding-left:2%;
+  color: #dddee0;
 }
 
 .button-container {
- margin: 0px 2%;
- padding: 3% 0px;
- 
-}
+margin: 0px 2%;
+padding: 3% 0px;
 
+}
+.leftbuttonpart{
+display:flex;
+align-items: center;
+}
 .button {
- display:flex;
-  width: 100%;
-  height: 50px;
-  background-color: #1e2024;
-  color: #fff;
-  text-align: center;
-  align-items: center; 
-  line-height: 50px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease; 
-  border-radius: 10px;
-  padding: 35px 3%;
+display: flex;
+justify-content: space-between;
+width: 100%;
+height: 50px;
+background-color: #1e2024;
+color: #fff;
+text-align: center;
+align-items: center; 
+line-height: 50px;
+cursor: pointer;
+margin-bottom: 10px;
+transition: background-color 0.3s ease; 
+border-radius: 10px;
+padding: 35px 0%;
+padding-left: 3%;
 }
 
 .button:last-child {
-  margin-right: 0;
+margin-right: 0;
 }
 
 .button:hover {
-  background-color: #27292E;
+background-color: #27292E;
 }
 .buttonp{
-    display:flex;
-    text-align: center;
-    margin-left: 5px;
-    width: 35px;
-    height: 35px;
-    background-color: #ffffff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-    border-radius: 6px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  text-align: center;
+  margin-left: 5px;
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 }
 .buttonp:last-child {
-    margin-right: 0;
-  }
-  .buttonp:hover {
-    background-color: #d8d8d8;
-  }
-  .plus{
-    font-weight: lighter;
-    margin-bottom:10%;
-    font-size: 40px;
-    color: black;
-  }
-  .buttontxt{
-    padding-left: 3%;
-    font-size: 20px;
-    color: #dddee0;
-    font-weight: Bold;
-  }
+  margin-right: 0;
+}
+.buttonp:hover {
+  background-color: #d8d8d8;
+}
+.plus{
+  font-weight: lighter;
+  font-size: 40px;
+  color: black;
+}
+.buttontxt{
+  padding-left: 15px;
+  font-size: 20px;
+  color: #dddee0;
+  font-weight: Bold;
+}
 
 /*Стили для модульный блоков*/
 .first-modalblock{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  padding-bottom: 12px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+padding-bottom: 12px;
 }
 .modal-text{
-  font-size: 22px;
-  color: #dddee0;
-  font-weight: Bold;
-  padding-left: 1%;
+font-size: 22px;
+color: #dddee0;
+font-weight: Bold;
+padding-left: 1%;
 }
 .cross {
-        position: relative;
-        width: 30px;
-        height: 30px;
-    }
-    .cross::before,
-    .cross::after {
-        background-color: #898B8F;
-        content: '';
-        position: absolute;
-        width: 60%;
-        height: 2px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: background-color 0.3s ease; 
-    }
-    .cross::before {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    .cross::after {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    .cross:hover::before,
-    .cross:hover::after {
-      background-color: #E9E9EB;
-    }
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+  }
+  .cross::before,
+  .cross::after {
+      background-color: #898B8F;
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s ease; 
+  }
+  .cross::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .cross::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .cross:hover::before,
+  .cross:hover::after {
+    background-color: #E9E9EB;
+  }
 
 .second-modalblock{
-  background-color: #1E2024;
-  width: 100%;
-  padding: 12px 25px;
-  color:#BEC0C6;
-  font-size: 15px;
+background-color: #1E2024;
+width: 100%;
+padding: 12px 25px;
+color:#BEC0C6;
+font-size: 15px;
 }
 .second-modalblock strong{
-  color:#d5d8df;
+color:#d5d8df;
 }
 
 .first-modalblock2{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  padding-bottom: 7px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+padding-bottom: 7px;
 }
 
 .second-modalblock2{
-  width: 100%;
-  padding: 0px 25px;
-  color:#BEC0C6;
-  font-size: 17px;
+width: 100%;
+padding: 0px 25px;
+color:#BEC0C6;
+font-size: 17px;
 }
 .second-modalblock2 strong{
-  color:#d5d8df;
+color:#d5d8df;
+}
+
+
+
+.pickedavatars {
+display: flex;
+}
+
+.pickedavatars img {
+  position: relative;
+}
+
+.pickedavatars img:not(:last-child) {
+margin-right: -20px; /* Регулируйте этот отрицательный отступ, чтобы получить желаемый эффект перекрытия */
+}
+
+
+.avatarnft{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    margin-right: 20px;
+}
+
+.applybutton{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  margin: 20px 30px;
+  border-radius: 12px;
+  background-color: #059DF5;
+  font-size: 17px;
+  color: rgb(230, 230, 230);
+  font-weight: 500;
+  margin-top: 0px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.applybutton:hover{
+  background-color: #0486D1;
 }

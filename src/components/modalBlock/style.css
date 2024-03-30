@@ -21,7 +21,6 @@
     border-radius: 20px;
     background-color: #16181C;
     width: 520px;
-    min-height: 600px;
     transform: translateY(100%);
     transition:0.2s all;
 }

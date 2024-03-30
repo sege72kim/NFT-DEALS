@@ -4,7 +4,7 @@ function ListItem({ data }) {
   return (
   
     <div className = "nftnameblock">
-      <img className="avatar"/>
+      <img className="avatar" src={data.image} alt={data.name}/>
       <div className="nfttextblock">
         <div className = "nfttype">
             {data.type}

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import ListItem from './ListItem';
-import './style.css'
+import './style.css';
 
-function ListComponent({ data }) {
-
+function ListComponent({ data, onItemClick }) {
   const [isFocused, setIsFocused] = useState(false); 
-
   const handleFocus = () => {
     setIsFocused(true);
   };
@@ -14,53 +12,125 @@ function ListComponent({ data }) {
     setIsFocused(false);
   };
 
-    const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   
-    const handleSearchChange = (e) => {
-      setSearchQuery(e.target.value);
-    };
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+  const handleItemClick = (item) => {
+    onItemClick(item);
+  };
   
-    const filteredData = data.filter((item) =>
-      item.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  
+  // Проверяем, есть ли данные в массиве
+  if (!data || data.length === 0) {
     return (
       <div>
-        <div className ="nftsearch">
-          
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          placeholder="Search NFT"
-        />
+      <div className="nftsearch">
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={handleSearchChange}
+        className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        placeholder="Search NFT"
+      />
+    </div>
+      <div className="ntfndnft">
+        <div className="ntfndnfttext">
+           Not enough NFTs
         </div>
+        <div className="ntfndnfttext2">
+        <p>Looks like we don't have this NFT on our</p>
+        <p>marketplace</p>
+        </div>
+      </div>
+    </div>
+    );
+  }
+  
+  // Фильтруем данные
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-        {filteredData.length > 0 ? (       // Проверяем, есть ли элементы в отфильтрованном массиве
+  // Проверяем, есть ли совпадения после фильтрации
+  if (filteredData.length > 0) {
+    return (
+      <div>
+        <div className="nftsearch">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder="Search NFT"
+          />
+        </div>
         <div className="scrollbar1">
           <div className="scrollbar2">
-            {filteredData.map((item) => (
+          {filteredData.map((item) => (
+        <div key={item.id} onClick={() => handleItemClick(item)}>
+          <ListItem data={item} />
+        </div>
+      ))}
+          </div>
+        </div>
+      </div>
+    );
+  } else if (searchQuery.trim() !== '') {
+    // Если есть данные, но они не совпадают по поиску
+    return (
+      <div>
+      <div className="nftsearch">
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={handleSearchChange}
+        className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        placeholder="Search NFT"
+      />
+    </div>
+      <div className="ntfndnft">
+        <div className="ntfndnfttext">
+          NFT not found
+        </div>
+        <div className="ntfndnfttext2">
+        <p>Looks like we don't have this NFT on our</p>
+        <p>marketplace</p>
+        </div>
+      </div>
+    </div>
+    );
+  } else {
+    // Если данные есть, но поиск не выполнен
+    return (
+      <div>
+        <div className="nftsearch">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder="Search NFT"
+          />
+        </div>
+        <div className="scrollbar1">
+          <div className="scrollbar2">
+            {data.map((item) => (
               <ListItem key={item.id} data={item} />
             ))}
           </div>
         </div>
-      ) : (                                // Если массив пуст, отображаем другой блок
-        <div className = "ntfndnft">
-          <div className = "ntfndnfttext">
-              Not enough NFTs
-          </div> 
-          <div className = "ntfndnfttext2">
-            <p>You and the other person need to have at least one</p>
-            <p>NFT to make a deal.</p>
-          </div>
-        </div>
-      )}
-
       </div>
     );
   }
-  
-  export default ListComponent
+}
+
+export default ListComponent;
