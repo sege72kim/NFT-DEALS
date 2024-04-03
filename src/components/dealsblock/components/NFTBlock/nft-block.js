@@ -32,10 +32,10 @@ const NftBlock = (props, {data}) => {
           </div>
           </div>
           <div className = "pickedavatars">
-           <img className = "avatarnft" src="https://pbs.twimg.com/media/FL4Ti0MXoAkpfmc.jpg"/>
-            <img className = "avatarnft" src="https://pbs.twimg.com/media/FL4Ti0MXoAkpfmc.jpg"/>
-            <img className = "avatarnft" src="https://pbs.twimg.com/media/FL4Ti0MXoAkpfmc.jpg"/>
-            <img className = "avatarnft" src="https://pbs.twimg.com/media/FL4Ti0MXoAkpfmc.jpg"/>
+           <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+            <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+            <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+            <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
           </div>
         </button>
 
@@ -50,7 +50,7 @@ const NftBlock = (props, {data}) => {
           </div>
           </div>
           <div className = "pickedavatars">
-           <img className = "avatarnft" src="https://pbs.twimg.com/media/FL4Ti0MXoAkpfmc.jpg"/>
+           <img className = "avatarnft" src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
           </div>
         </button>
         

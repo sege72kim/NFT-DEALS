@@ -1,6 +1,8 @@
 const data = [
   {
-    username: 'user1',
+    username: 'Yudzin228',
+    glint: 23,
+    ton: 990,
     items: [
       {id: 1,
         name: 'diamond #8788',
@@ -32,7 +34,9 @@ const data = [
     ]
   },
   {
-    username: 'user2',
+    username: 'UserName 223',
+    glint: 0,
+    ton: 2,
     items: [
       
     ]
