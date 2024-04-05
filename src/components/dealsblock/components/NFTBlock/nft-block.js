@@ -5,14 +5,20 @@ import './style.css';
 import data from './ListOfNFTs/data';
 import UserSearch from '../SearchBlock/user-search';
 
-const NftBlock = (props, {data}) => {
+const NftBlock = (props) => {
   const [modalActive, setModalActive] = useState(false);
   const [modalActive2, setModalActive2] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null); // Состояние для выбранного элемента
+  const [selectedOption, setSelectedOption] = useState('');
+  const [showInitialBlock, setShowInitialBlock] = useState(true); // добавлено состояние для отображения блока по умолчанию
 
   const handleItemClick = (item) => {
     // Если выбран тот же элемент, отменяем выбор
     setSelectedItem((prevItem) => (prevItem === item ? null : item));
+  };
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+    setShowInitialBlock(false); // скрыть блок по умолчанию после выбора опции
   };
 
   return (
@@ -46,7 +52,7 @@ const NftBlock = (props, {data}) => {
             <div className="plus">+</div>
           </div>
           <div className="buttontxt">
-            TON
+            CRYPTO
           </div>
           </div>
           <div className = "pickedavatars">
@@ -84,7 +90,24 @@ const NftBlock = (props, {data}) => {
              <div className="second-modalblock2">
                 {props.text2}
              </div>
-             <UserSearch textsearch = "Min 1 TON"/>
+
+             <div className="choosecrypto">
+             <div className="content">
+              <div className = "select-container">
+          <select value={selectedOption} onChange={handleChange} className="select-box">
+           <option value="option0">Choose crypto for deal</option>
+            <option value="option1">TON</option>
+           <option value="option2">HMSTR</option>
+           <option value="option3">GRAM</option>
+          </select>
+          </div>
+             {selectedOption === 'option1' && <UserSearch textsearch = "Min 1 TON"/>}
+             {selectedOption === 'option2' && <UserSearch textsearch = "Min 1 HAMSTER"/>}
+             {selectedOption === 'option3' && <UserSearch textsearch = "Min 1 GRAM"/>}
+             {selectedOption === 'option0' && <div className="initial-block">Choose crypto for deal</div>}
+             {showInitialBlock && <div className="initial-block">Choose crypto for deal</div>} {/* блок по умолчанию */}
+          </div>
+           </div>
              <div className = "applybutton" onClick={() => setModalActive2(false)}>
                 <p>Apply</p>
              </div>

@@ -1,8 +1,8 @@
 import "./style.css"
 function Notifications ({active, setActive, children}) {
     return (
-        <div className = {active ? "modal active" : "modal"} onClick={()=> setActive(false) }>
-        <div className={active ? "modal_content active" : "modal_content"} onClick = {e => e.stopPropagation()}>
+        <div className = {active ? "modalnot active" : "modalnot"} onClick={()=> setActive(false) }>
+        <div className={active ? "modalnot_content active" : "modalnot_content"} onClick = {e => e.stopPropagation()}>
         {children}
         </div>
     </div>

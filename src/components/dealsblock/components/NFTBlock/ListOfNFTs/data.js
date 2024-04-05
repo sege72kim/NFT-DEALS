@@ -1,46 +1,67 @@
 const data = [
   {
-    username: 'Yudzin228',
-    glint: 23,
+    username: 'UserName 228',
+    hamsters: 5,
     ton: 990,
     items: [
       {id: 1,
-        name: 'diamond #8788',
-        type: 'ton diamonds',
-        image: 'https://icoholder.com/files/img/ae5d9e01413d07277d123d1057657b5b.jpeg'
+        name: 'HMSTR',
+        type: 'ton hamster',
+        image: 'https://github.com/lolzhamster/website/blob/main/Frame%2013logo%20TMC%203(1).png?raw=true'
        },
       { id: 2,
-        name: 'USERSSSR #1991',
-        type: 'Telegram usernames',
-        image: 'https://nft.fragment.com/username/itemm.webp' 
+        name: 'LOLZ#4',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/NwcEYiPT588h9KkkILaZC6vR6dSaWt5WLOKYVdYu_lM/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvMy9pbWFnZS5wbmc' 
       },
       { id: 3,
-        name: 'g-bot #3345',
-        type: 'G-BOT SD',
-        image: 'https://i.getgems.io/tkj285PyKe5LM2oVcLXbPqgQprbqFNYb8OoIpZPzIkk/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLXMzL25mdC1jb250ZW50LWNhY2hlL2ltYWdlcy9FUURnWm1RcERKYk82bGFIdnZpYmFYWVhNbEVBWUVINkxuVXRBNUoxOVcxOGRFTnAvNjk4ZTA2OGEwNjlhMGRmMQ'
+        name: 'LOLZ#59',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/pwW6Y9cX0cwfrOfv_X6YBRteBHXTffMt3Ej195rN9HE/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvNTgvaW1hZ2UucG5n'
        },
        {
         id: 4,
-        name: 'g-bot #2263',
-        type: 'G-BOT SD',
-        image: 'https://ton.app/media/917c4dad-250c-4b01-92c1-9bba2e637903.jpg'
+        name: 'LOLZ#62',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/YNV-0xHE466rpYBCuNKokNnj_sheORDXo_OU5wNQwac/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvMTAwMDA2MS9pbWFnZS5wbmc'
       },
     {
       id: 5,
-      name: 'g-bot #5234',
-      type: 'G-BOT SD',
-      image: 'https://pbs.twimg.com/media/FLeEv93XoAQ7YhR.jpg'
+      name: 'LOLZ#54',
+      type: 'lolz hamsters & gods',
+      image: 'https://i.getgems.io/jkHNEKtrcimMHlWBkvCOPAg8JX3sLwbIKnkuZ8-jY5w/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvNzMvaW1hZ2UucG5n'
     }
     ]
   },
   {
     username: 'UserName 223',
-    glint: 0,
-    ton: 2,
+    hamsters: 4,
+    ton: 223,
     items: [
-      
+      {id: 1,
+        name: 'LOLZ#87',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/BRbyYv5Ah1Ozp-t4-Tt6bCvqupTEIe6JqdtWJDGTeKU/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODYvaW1hZ2UucG5n'
+       },
+      { id: 2,
+        name: 'LOLZ#81',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/B0f31J3iylwb6geqlTVYYoJ0_bKq1-uBC5Dyo97QeAA/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODAvaW1hZ2UucG5n' 
+      },
+      { id: 3,
+        name: 'LOLZ#96',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/maatX5U8hIE6VgAdSC_VqXlTNY55N06J_4m6syKzFQQ/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTUvaW1hZ2UucG5n'
+       },
+       {
+        id: 4,
+        name: 'LOLZ#97',
+        type: 'lolz hamsters & gods',
+        image: 'https://i.getgems.io/RGSN5z_ApqRNzEy4-R42WLUx_0_HNcT98Z1V4d2s4cI/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTYvaW1hZ2UucG5n'
+      }
     ]
-  }
+  },
+  
   ];
   
   export default data;

@@ -4,14 +4,14 @@ const Header = () => {
     <section className="header">
                 <div className = "left-header">
                     <h1 className="header__title">
-                        <strong>NFT Deals</strong>
+                        <strong>Hamster Exchange</strong>
                     </h1>
                     <div className="header__text">
-                        <p>Make deals with another users</p>
+                        <p> NFT P2P Exchange Guarantor Service</p>
                     </div>
                 </div>
                 <div className = "right-header">
-                    <button className="rectangle-button">My NFT Deals</button>
+                    <button className="rectangle-button">Complete Trade</button>
                 </div>
     </section>
     );
