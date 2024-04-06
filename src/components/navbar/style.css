@@ -3,6 +3,7 @@
 .nav {
 	padding: 15px 0;
 	background-color: var(--nav-bg);
+	background-color: gray;
 	border-bottom: 1px solid var(--nav-border);
 	color: var(--nav-text);
 	letter-spacing: normal;
@@ -53,6 +54,8 @@
     cursor: pointer; 
 	transition: opacity 0.2s ease-in;
 }
+
+
 .push{
 	height: 28px;
 	width: 28px;
@@ -102,4 +105,17 @@
 	font-size: 14px;
 	font-weight: 600;
 	color: #96989E;
+}
+
+
+/* Custom select option */
+.dropdown{
+}
+.dropdown .dropdown-btn {
+	padding:10px;
+	background-color: #2D2F35;
+	font-weight: bold;
+	color:white;
+	display:flex;
+	align-items: center;
 }

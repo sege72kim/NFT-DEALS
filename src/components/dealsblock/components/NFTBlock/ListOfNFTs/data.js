@@ -38,7 +38,7 @@ const data = [
     hamsters: 4,
     ton: 223,
     items: [
-      {id: 1,
+      /* {id: 1,
         name: 'LOLZ#87',
         type: 'lolz hamsters & gods',
         image: 'https://i.getgems.io/BRbyYv5Ah1Ozp-t4-Tt6bCvqupTEIe6JqdtWJDGTeKU/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODYvaW1hZ2UucG5n'
@@ -58,7 +58,7 @@ const data = [
         name: 'LOLZ#97',
         type: 'lolz hamsters & gods',
         image: 'https://i.getgems.io/RGSN5z_ApqRNzEy4-R42WLUx_0_HNcT98Z1V4d2s4cI/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTYvaW1hZ2UucG5n'
-      }
+      }*/
     ]
   },
   

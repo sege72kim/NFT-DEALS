@@ -3,8 +3,18 @@ import React, { useState } from 'react';
 import Notifications from "./notifications/notifications"
 import push from "./push.png"
 import logo from "./logo.png"
+import { FormattedMessage } from 'react-intl'
+import { LOCALES } from '../../i18n/locales'
+import CustomSelect from "./customselect";
 function Navbar () {
     const [modalActive, setModalActive] = useState(false);
+    const languages = [
+        { name: 'English', code: LOCALES.ENGLISH },
+        { name: 'Русский', code: LOCALES.RUSSIAN },
+        { name: '中国人', code: LOCALES.CHINES },
+        { name: 'Español', code: LOCALES.SPANISH },
+        { name: 'عرب', code: LOCALES.ARAB }
+      ]
     return (
         <nav className="nav">
         <div className="container">
@@ -13,21 +23,19 @@ function Navbar () {
                  <img href="./index.html" src={logo} className="logo"/>               
                  <a href="./index.html" className="logotxt"><strong>HEX</strong> </a>
                  </div>
-
                 <ul className="nav-list">
-                     <li className = "nav-list__item">
-                        <div class="pushbutton" onClick={() => setModalActive(true)}>
+                <CustomSelect/>
+                <div class="pushbutton" onClick={() => setModalActive(true)}>
                             <img src={push} className="push"></img>
-                        </div>
-                     </li>
-                    <li className="nav-list__item"><a href="#" className="round-button" >Your Link</a></li> 
+                 </div>
+                    <div href="#" className="round-button" ><FormattedMessage id='yourlink' /> </div>
                 </ul>
             </div>
         </div>
 
         <Notifications active={modalActive} setActive={setModalActive}>
         <div className="nottxt">
-            Notifications
+        <FormattedMessage id='notifications' />
         </div>
         <div className="notcomp">
             <img className="notpng" src="https://i.getgems.io/NwcEYiPT588h9KkkILaZC6vR6dSaWt5WLOKYVdYu_lM/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvMy9pbWFnZS5wbmc"/>

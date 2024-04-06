@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { FormattedMessage } from 'react-intl'
 
 const UserSearch = ({ textsearch, onApply }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -37,7 +38,7 @@ const [isFocused, setIsFocused] = useState(false);
       />
       <div className = "buttoncr-container">
       <button className = "applybuttoncr" onClick={handleApplyClick}>
-      <p>Apply</p>
+      <p>{<FormattedMessage id='apply' />}</p>
       </button>
       </div>
     </div>

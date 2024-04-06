@@ -1,4 +1,5 @@
 import './style.css'
+import { FormattedMessage } from 'react-intl'
 const Header = () => {
     return (
     <section className="header">
@@ -7,11 +8,11 @@ const Header = () => {
                         <strong>Hamster Exchange</strong>
                     </h1>
                     <div className="header__text">
-                        <p> NFT P2P Exchange Guarantor Service</p>
+                        <p><FormattedMessage id='garant' /></p>
                     </div>
                 </div>
                 <div className = "right-header">
-                    <button className="rectangle-button">Complete Trade</button>
+                    <button className="rectangle-button"><FormattedMessage id='cmplttr' /></button>
                 </div>
     </section>
     );

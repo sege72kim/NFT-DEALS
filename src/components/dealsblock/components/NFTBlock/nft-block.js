@@ -6,6 +6,8 @@ import UserSearch from '../SearchBlock/user-search';
 import HMSTR from '../../../../logos/HMSTR.jpg'
 import GRAM from '../../../../logos/GRAM.jpg'
 import TON from '../../../../logos/TON.jpg'
+import { FormattedMessage } from 'react-intl'
+
 const NftBlock = (props) => {
   const [userData, setUserData] = useState('');
   const [userData2, setUserData2] = useState('');
@@ -106,18 +108,18 @@ const NftBlock = (props) => {
       <Modal active={modalActive} setActive={setModalActive}>
         <div className="first-modalblock">
           <div className="modal-text">
-            NFTs for the deal
+          {<FormattedMessage id='nftsfordeal' />}
           </div>
           <div className="cross" onClick={() => setModalActive(false)}></div>
         </div>
         <div className="second-modalblock">
-          You can select up to <strong>4 NFTs</strong>
+        {<FormattedMessage id='youcanselect' />}<strong>4 NFTs</strong>
         </div>
         <div>
-          <ListComponent data={props.data} />
+          <ListComponent data={props.data} searchtxt={<FormattedMessage id='searchnft'/>} />
         </div>
         <div className = "applybutton" onClick={() => setModalActive(false)}>
-                <p>Apply</p>
+                <p>{<FormattedMessage id='apply' />}</p>
              </div>
       </Modal>
 
@@ -136,7 +138,7 @@ const NftBlock = (props) => {
              <div className="content">
               <div className = "select-container">
           <select value={selectedOption} onChange={handleChange} className="select-box">
-           <option value="option0">Choose crypto for deal</option>
+           <option value="option0">{<FormattedMessage id='choosecryptodeal' />}</option>
             <option value="option1">TON</option>
            <option value="option2">HMSTR</option>
            <option value="option3">GRAM</option>
@@ -145,8 +147,8 @@ const NftBlock = (props) => {
              {selectedOption === 'option1' && <UserSearch textsearch = "Min 1 TON" onInputChange={handleInputChange} onApply={handleUserSearchApply}/>}
              {selectedOption === 'option2' && <UserSearch textsearch = "Min 1 HAMSTER" onInputChange={handleInputChange2} onApply={handleUserSearchApply2}/>}
              {selectedOption === 'option3' && <UserSearch textsearch = "Min 1 GRAM" onInputChange={handleInputChange3} onApply={handleUserSearchApply3}/>}
-             {selectedOption === 'option0' && <div className="initial-block">Choose crypto for deal</div>}
-             {showInitialBlock && <div className="initial-block">Choose crypto for deal</div>}
+             {selectedOption === 'option0' && <div className="initial-block">{<FormattedMessage id='choosecryptodeal' />}</div>}
+             {showInitialBlock && <div className="initial-block">{<FormattedMessage id='choosecryptodeal' />}</div>}
           </div>
            </div>
       </Modal>

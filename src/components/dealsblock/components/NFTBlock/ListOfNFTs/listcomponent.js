@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ListItem from './ListItem';
 import './style.css';
+import { FormattedMessage } from 'react-intl'
 
 function ListComponent({ data, onItemClick }) {
   const [isFocused, setIsFocused] = useState(false); 
@@ -38,11 +39,11 @@ function ListComponent({ data, onItemClick }) {
     </div>
       <div className="ntfndnft">
         <div className="ntfndnfttext">
-           Not enough NFTs
+        {<FormattedMessage id='notenough' />}
         </div>
         <div className="ntfndnfttext2">
-        <p>Looks like we don't have this NFT on our</p>
-        <p>marketplace</p>
+        <p>{<FormattedMessage id='notenought1' />}</p>
+        <p>{<FormattedMessage id='notenought2' />}</p>
         </div>
       </div>
     </div>
@@ -66,8 +67,9 @@ function ListComponent({ data, onItemClick }) {
             className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            placeholder="Search NFT"
+            placeholder='Seacrh NFT'
           />
+
         </div>
         <div className="scrollbar1">
           <div className="scrollbar2">
@@ -97,11 +99,11 @@ function ListComponent({ data, onItemClick }) {
     </div>
       <div className="ntfndnft">
         <div className="ntfndnfttext">
-          NFT not found
+        {<FormattedMessage id='notfound' />}
         </div>
         <div className="ntfndnfttext2">
-        <p>Looks like we don't have this NFT on our</p>
-        <p>marketplace</p>
+        <p>{<FormattedMessage id='notfound1' />}</p>
+        <p>{<FormattedMessage id='notfound2' />}</p>
         </div>
       </div>
     </div>
