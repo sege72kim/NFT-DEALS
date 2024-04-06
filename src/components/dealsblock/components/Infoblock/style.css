@@ -46,15 +46,13 @@
   }
 @media (max-width: 600px) {
     .info-block{
-        width: 100%; /* Изменяем ширину блоков на 100% на маленьких экранах */
+        width: 100%; 
         padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        margin: 10px 0px;
-        font-size: 16px;/*вот эта строчка добавлена*/
+        margin-top: 10px;
+        font-size: 14px;
     }
     .little-text2{
-        font-size:20px; /*вот эта строчка добавлена*/
+        font-size:15px; 
     }
     
   }

@@ -7,7 +7,6 @@
   left: 0;
   min-width: 49%;
   align-items: center;
-  padding: 20px;
 }
 
 .info-text3{
@@ -161,21 +160,38 @@ color:#d5d8df;
 display: flex;
 }
 
-.pickedavatars img {
-  width: 45px;
-    height: 45px;
+.avatarnft {
+  width: 40px;
+    height: 40px;
     border-radius: 50%; 
     margin-right: 20px;
     border: 3px solid #1E2024;
   position: relative;
   background-color: #16181C;
 }
-
+.avatarnfts {
+  width: 35px;
+    height: 35px;
+    border-radius: 50%; 
+    margin-right: 20px;
+    border: 3px solid #1E2024;
+  position: relative;
+  background-color: #16181C;
+  margin-left: 8px;
+}
+.text-avatar{
+  display: flex;
+  align-items:center;
+}
 .pickedavatars img:not(:last-child) {
 margin-right: -20px; /* Регулируйте этот отрицательный отступ, чтобы получить желаемый эффект перекрытия */
 }
 
-
+.text-userData{
+  color: #E9E9EB;
+  font-size: 21px;
+  font-weight: 700;
+}
 .applybutton{
   align-items: center;
   display: flex;
@@ -203,17 +219,19 @@ margin-right: -20px; /* Регулируйте этот отрицательны
   background-color: black;
 }
 .select-box {
-  padding: 10px 18%;
+  padding: 10px 10%;
   background-color: #1E2024;
   margin-top: 10px;
   font-size: 16px;
   border: 1px solid #1e2024;
   transition: border-color 0.3s ease;
   border-radius: 15px;
+  cursor: pointer;
 }
 .select-box option {
   background-color: #1E2024;
   color: #817f7c;
+  cursor: pointer;
 }
 .select-box:hover,
 .select-box:focus,
@@ -235,4 +253,43 @@ margin-right: -20px; /* Регулируйте этот отрицательны
 .select-container{
   justify-content: center;
   display:flex;
+}
+@media (max-width: 600px) {
+  .nftblock {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+  .info-text3{
+    font-size: 19px;
+  }
+  .buttontxt{
+    font-size: 16px;
+  }
+  .buttonp{
+    width: 30px;
+  height: 30px;
+  }
+  .plus{
+    font-size:30px;
+  }
+  .avatar{
+    height: 40px;
+    width: 40px;
+  }
+}
+@media(max-width: 500px){
+  .nftblock{
+      min-width:400px;
+}
+}
+@media(max-width: 400px){
+  .nftblock{
+      min-width:300px;
+}
+}
+@media(max-width: 300px){
+  .nftblock{
+      min-width:200px;
+}
 }

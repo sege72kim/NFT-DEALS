@@ -2,23 +2,57 @@ import React, { useState } from 'react';
 import ListComponent from './ListOfNFTs/listcomponent';
 import Modal from '../../../modalBlock/modal';
 import './style.css';
-import data from './ListOfNFTs/data';
 import UserSearch from '../SearchBlock/user-search';
-
+import HMSTR from '../../../../logos/HMSTR.jpg'
+import GRAM from '../../../../logos/GRAM.jpg'
+import TON from '../../../../logos/TON.jpg'
 const NftBlock = (props) => {
+  const [userData, setUserData] = useState('');
+  const [userData2, setUserData2] = useState('');
+  const [userData3, setUserData3] = useState('');
+  
+  const handleInputChange = (value) => {
+    setUserData(value);
+  };
+
+  // Обработчик для второго поля ввода
+  const handleInputChange2 = (value) => {
+    setUserData2(value);
+  };
+
+  // Обработчик для третьего поля ввода
+  const handleInputChange3 = (value) => {
+    setUserData3(value);
+  };
+
+  // Обработчик для кнопки "Apply" в UserSearch
+  const handleUserSearchApply = (value) => {
+    setUserData(value); 
+    setUserData2(''); 
+    setUserData3(''); 
+    setModalActive2(false);
+  };
+  const handleUserSearchApply2 = (value) => {
+    setUserData(''); 
+    setUserData2(value); 
+    setUserData3(''); 
+    setModalActive2(false);
+  };
+  const handleUserSearchApply3 = (value) => {
+    setUserData(''); 
+    setUserData2(''); 
+    setUserData3(value); 
+    setModalActive2(false);
+  };
+  
   const [modalActive, setModalActive] = useState(false);
   const [modalActive2, setModalActive2] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null); // Состояние для выбранного элемента
   const [selectedOption, setSelectedOption] = useState('');
   const [showInitialBlock, setShowInitialBlock] = useState(true); // добавлено состояние для отображения блока по умолчанию
 
-  const handleItemClick = (item) => {
-    // Если выбран тот же элемент, отменяем выбор
-    setSelectedItem((prevItem) => (prevItem === item ? null : item));
-  };
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
-    setShowInitialBlock(false); // скрыть блок по умолчанию после выбора опции
+    setShowInitialBlock(false);
   };
 
   return (
@@ -38,10 +72,10 @@ const NftBlock = (props) => {
           </div>
           </div>
           <div className = "pickedavatars">
-           <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
-            <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
-            <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
-            <img  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+           <img  className = "avatarnft"  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+            <img  className = "avatarnft"  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+            <img  className = "avatarnft"  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+            <img  className = "avatarnft" src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
           </div>
         </button>
 
@@ -56,10 +90,17 @@ const NftBlock = (props) => {
           </div>
           </div>
           <div className = "pickedavatars">
+             {userData || userData2 || userData3 ? (
+            <>
+            <div className="text-userData">{userData && <div className = "text-avatar">{userData} <img className = "avatarnfts" src={TON}/></div> }</div>
+            <div className="text-userData">{userData2 && <div className = "text-avatar">{userData2} <img className = "avatarnfts" src={HMSTR}/></div> }</div>
+            <div className="text-userData">{userData3 && <div className = "text-avatar">{userData3} <img className = "avatarnfts" src={GRAM}/></div> }</div>
+            </>
+           ) : (
            <img className = "avatarnft" src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"/>
+          )}
           </div>
         </button>
-        
       </div>
 
       <Modal active={modalActive} setActive={setModalActive}>
@@ -73,7 +114,7 @@ const NftBlock = (props) => {
           You can select up to <strong>4 NFTs</strong>
         </div>
         <div>
-          <ListComponent data={props.data} onItemClick={handleItemClick} />
+          <ListComponent data={props.data} />
         </div>
         <div className = "applybutton" onClick={() => setModalActive(false)}>
                 <p>Apply</p>
@@ -101,16 +142,13 @@ const NftBlock = (props) => {
            <option value="option3">GRAM</option>
           </select>
           </div>
-             {selectedOption === 'option1' && <UserSearch textsearch = "Min 1 TON"/>}
-             {selectedOption === 'option2' && <UserSearch textsearch = "Min 1 HAMSTER"/>}
-             {selectedOption === 'option3' && <UserSearch textsearch = "Min 1 GRAM"/>}
+             {selectedOption === 'option1' && <UserSearch textsearch = "Min 1 TON" onInputChange={handleInputChange} onApply={handleUserSearchApply}/>}
+             {selectedOption === 'option2' && <UserSearch textsearch = "Min 1 HAMSTER" onInputChange={handleInputChange2} onApply={handleUserSearchApply2}/>}
+             {selectedOption === 'option3' && <UserSearch textsearch = "Min 1 GRAM" onInputChange={handleInputChange3} onApply={handleUserSearchApply3}/>}
              {selectedOption === 'option0' && <div className="initial-block">Choose crypto for deal</div>}
-             {showInitialBlock && <div className="initial-block">Choose crypto for deal</div>} {/* блок по умолчанию */}
+             {showInitialBlock && <div className="initial-block">Choose crypto for deal</div>}
           </div>
            </div>
-             <div className = "applybutton" onClick={() => setModalActive2(false)}>
-                <p>Apply</p>
-             </div>
       </Modal>
     </div>
   );

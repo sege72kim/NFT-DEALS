@@ -10,13 +10,13 @@ const DealsblockMobile = () => {
         /*<UserSearch textsearch = "Choose user for deal" />*/ 
     <section className = "dealsblock">
         <div className = "container3">
-        <InfoBlock who="Seller" username={userData.username} glint={userData.glint} ton={userData.ton}/>
+        <InfoBlock who="Seller" username={userData.username} glint={userData.hamsters} ton={userData.ton}/>
         </div>
         <div className = "container3">
         <NftBlock giveget="You Give" text1="Add CRYPTO" text2="You can offer CRYPTO to the user for the deal" data={userData.items} />
         </div>
         <div className = "container3">
-        <InfoBlock who="Recipient" username={userData2.username} glint={userData2.glint} ton={userData2.ton}/>
+        <InfoBlock who="Recipient" username={userData2.username} glint={userData2.hamsters} ton={userData2.ton}/>
         </div>
         <div className = "container3">
         <NftBlock giveget="You Get" text1="Request CRYPTO" text2="You can request CRYPTO for the deal" data={userData2.items} />

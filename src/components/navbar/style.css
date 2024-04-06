@@ -61,6 +61,7 @@
 	padding: 6px;
 	border-radius: 20px;
 	transition: background-color 0.3s ease;
+	cursor: pointer;
 }
 .pushbutton:hover{
 	background-color: #4b4e53;

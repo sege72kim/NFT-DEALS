@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './style.css'
-const UserSearch = (props) => {
-    const [isFocused, setIsFocused] = useState(false); // Состояние для отслеживания фокуса
+import './style.css';
+
+const UserSearch = ({ textsearch, onApply }) => {
+  const [searchValue, setSearchValue] = useState('');
+const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -10,15 +12,36 @@ const UserSearch = (props) => {
   const handleBlur = () => {
     setIsFocused(false);
   };
-    return ( 
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    // Проверяем, является ли введенное значение положительным числом
+    if (/^\d*\.?\d*$/.test(inputValue)) {
+      setSearchValue(inputValue);
+    }
+  };
+
+  const handleApplyClick = () => {
+    onApply(searchValue);
+  };
+
+  return ( 
     <div className="search-block">
-    <input type="search-text" 
-    className={isFocused ? 'search-blocki active' : 'search-blocki'}
-    onFocus={handleFocus}
-    onBlur={handleBlur}
-    placeholder={props.textsearch}/>
+      <input 
+        type="text"
+        className={isFocused ? 'search-blocki active' : 'search-blocki'}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        placeholder={textsearch}
+        value={searchValue}
+        onChange={handleInputChange}
+      />
+      <div className = "buttoncr-container">
+      <button className = "applybuttoncr" onClick={handleApplyClick}>
+      <p>Apply</p>
+      </button>
+      </div>
     </div>
- );
+  );
 }
  
 export default UserSearch;

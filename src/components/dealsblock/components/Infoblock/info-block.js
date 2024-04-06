@@ -8,7 +8,7 @@ const InfoBlock = (props) => {
                     <h1 className = "little-text2">{props.username}</h1>
                 </div>
                     <div className="column-container">
-                        <h3 className = "little-text3">HAMSTERS</h3>
+                        <h3 className = "little-text3">HMSTR</h3>
                         <strong>{props.glint}</strong>
                     </div>
                     <div className="column-container">

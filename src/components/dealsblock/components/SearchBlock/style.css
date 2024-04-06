@@ -1,10 +1,12 @@
-.search-blocki[type="search-text"] {
+.search-blocki[type="text"] {
     padding: 12px;
-    width: calc(100% - 6px);
+    
+    width: calc(100% - 46px);
     border: 1px solid #1e2024;
 	background-color: #1e2024;
     transition: border-color 0.3s ease;
     border-radius: 12px;
+    margin-left: 23px;
 }
 .search-blocki:hover,
 .search-blocki:focus,
@@ -13,12 +15,34 @@
 }
 .search-block {
     background-color: #15181c;
-	min-width: 49%;
+    min-width: 49%;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+.buttoncr-container{
+    padding-top: 40px;
+}
+.applybuttoncr{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 95%;
+    margin-left: 15px;
+    border-radius: 12px;
+    background-color: #059DF5;
+    font-size: 17px;
+    color: rgb(230, 230, 230);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .applybuttoncr:hover{
+    background-color: #0486D1;
+  }
+  
 @media (max-width: 600px) {
     .search-block {
         width: 100%; /* Изменяем ширину блоков на 100% на маленьких экранах */
