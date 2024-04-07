@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import ListItem from './ListItem';
-import './style.css';
-import { FormattedMessage } from 'react-intl'
+import React, { useState } from "react";
+import ListItem from "./ListItem";
+import "./style.css";
+import { FormattedMessage } from "react-intl";
 
 function ListComponent({ data, onClickBlocks }) {
-  const [isFocused, setIsFocused] = useState(false); 
+  const [isFocused, setIsFocused] = useState(false);
   const handleFocus = () => {
     setIsFocused(true);
   };
@@ -13,12 +13,11 @@ function ListComponent({ data, onClickBlocks }) {
     setIsFocused(false);
   };
 
-  const [searchQuery, setSearchQuery] = useState('');
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
-
 
   const [selectedBlocks, setSelectedBlocks] = useState([]);
 
@@ -32,36 +31,34 @@ function ListComponent({ data, onClickBlocks }) {
     }
   };
 
-
-
   // Проверяем, есть ли данные в массиве
   if (!data || data.length === 0) {
     return (
       <div>
-      <div className="nftsearch">
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={handleSearchChange}
-        className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        placeholder="Search NFT"
-      />
-    </div>
-      <div className="ntfndnft">
-        <div className="ntfndnfttext">
-        {<FormattedMessage id='notenough' />}
+        <div className="nftsearch">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className={isFocused ? "nftsearchi active" : "nftsearchi"}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder="Search NFT"
+          />
         </div>
-        <div className="ntfndnfttext2">
-        <p>{<FormattedMessage id='notenought1' />}</p>
-        <p>{<FormattedMessage id='notenought2' />}</p>
+        <div className="ntfndnft">
+          <div className="ntfndnfttext">
+            {<FormattedMessage id="notenough" />}
+          </div>
+          <div className="ntfndnfttext2">
+            <p>{<FormattedMessage id="notenought1" />}</p>
+            <p>{<FormattedMessage id="notenought2" />}</p>
+          </div>
         </div>
       </div>
-    </div>
     );
   }
-  
+
   // Фильтруем данные
   const filteredData = data.filter((item) =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -76,52 +73,55 @@ function ListComponent({ data, onClickBlocks }) {
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
-            className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
+            className={isFocused ? "nftsearchi active" : "nftsearchi"}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            placeholder='Seacrh NFT'
+            placeholder="Seacrh NFT"
           />
-
         </div>
         <div className="scrollbar1">
           <div className="scrollbar2">
-          {filteredData.map((item) => (
-        <div key={item.id} className={selectedBlocks.includes(item.name) ? "selected-block" : "block"} onClick={() => handleClick(item)}>
-          <ListItem data={item} />
-        </div>
-      ))}
+            {filteredData.map((item) => (
+              <div key={item.id} onClick={() => handleClick(item)}>
+                <ListItem data={item} />
+              </div>
+            ))}
           </div>
         </div>
-        <button onClick={() => onClickBlocks(selectedBlocks)}>
-        Send Selected Blocks
-      </button>
+
+        <button
+          className="applybutton"
+          onClick={() => onClickBlocks(selectedBlocks)}
+        >
+          <p>{<FormattedMessage id="apply" />}</p>
+        </button>
       </div>
     );
-  } else if (searchQuery.trim() !== '') {
+  } else if (searchQuery.trim() !== "") {
     // Если есть данные, но они не совпадают по поиску
     return (
       <div>
-      <div className="nftsearch">
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={handleSearchChange}
-        className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        placeholder="Search NFT"
-      />
-    </div>
-      <div className="ntfndnft">
-        <div className="ntfndnfttext">
-        {<FormattedMessage id='notfound' />}
+        <div className="nftsearch">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className={isFocused ? "nftsearchi active" : "nftsearchi"}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder="Search NFT"
+          />
         </div>
-        <div className="ntfndnfttext2">
-        <p>{<FormattedMessage id='notfound1' />}</p>
-        <p>{<FormattedMessage id='notfound2' />}</p>
+        <div className="ntfndnft">
+          <div className="ntfndnfttext">
+            {<FormattedMessage id="notfound" />}
+          </div>
+          <div className="ntfndnfttext2">
+            <p>{<FormattedMessage id="notfound1" />}</p>
+            <p>{<FormattedMessage id="notfound2" />}</p>
+          </div>
         </div>
       </div>
-    </div>
     );
   } else {
     // Если данные есть, но поиск не выполнен
@@ -132,7 +132,7 @@ function ListComponent({ data, onClickBlocks }) {
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
-            className={isFocused ? 'nftsearchi active' : 'nftsearchi'}
+            className={isFocused ? "nftsearchi active" : "nftsearchi"}
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder="Search NFT"
@@ -141,10 +141,16 @@ function ListComponent({ data, onClickBlocks }) {
         <div className="scrollbar1">
           <div className="scrollbar2">
             {data.map((item) => (
-              <div key={item.id} >
-              <ListItem data={item} />
-            </div>
+              <div key={item.id} onClick={() => handleClick(item)}>
+                <ListItem data={item} />
+              </div>
             ))}
+            <button
+              className="applybutton"
+              onClick={() => onClickBlocks(selectedBlocks)}
+            >
+              <p>{<FormattedMessage id="apply" />}</p>
+            </button>
           </div>
         </div>
       </div>
