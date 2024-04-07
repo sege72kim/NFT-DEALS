@@ -3,7 +3,7 @@ import ListItem from './ListItem';
 import './style.css';
 import { FormattedMessage } from 'react-intl'
 
-function ListComponent({ data, onItemClick }) {
+function ListComponent({ data, onClickBlocks }) {
   const [isFocused, setIsFocused] = useState(false); 
   const handleFocus = () => {
     setIsFocused(true);
@@ -18,10 +18,22 @@ function ListComponent({ data, onItemClick }) {
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
-  const handleItemClick = (item) => {
-    onItemClick(item);
+
+
+  const [selectedBlocks, setSelectedBlocks] = useState([]);
+
+  const handleClick = (blockData) => {
+    // Если блок уже выбран, удаляем его из массива выбранных блоков
+    if (selectedBlocks.includes(blockData)) {
+      setSelectedBlocks(selectedBlocks.filter((item) => item !== blockData));
+    } else {
+      // Иначе добавляем блок в массив выбранных блоков
+      setSelectedBlocks([...selectedBlocks, blockData]);
+    }
   };
-  
+
+
+
   // Проверяем, есть ли данные в массиве
   if (!data || data.length === 0) {
     return (
@@ -74,12 +86,15 @@ function ListComponent({ data, onItemClick }) {
         <div className="scrollbar1">
           <div className="scrollbar2">
           {filteredData.map((item) => (
-        <div key={item.id} onClick={() => handleItemClick(item)}>
+        <div key={item.id} className={selectedBlocks.includes(item.name) ? "selected-block" : "block"} onClick={() => handleClick(item)}>
           <ListItem data={item} />
         </div>
       ))}
           </div>
         </div>
+        <button onClick={() => onClickBlocks(selectedBlocks)}>
+        Send Selected Blocks
+      </button>
       </div>
     );
   } else if (searchQuery.trim() !== '') {
@@ -126,7 +141,9 @@ function ListComponent({ data, onItemClick }) {
         <div className="scrollbar1">
           <div className="scrollbar2">
             {data.map((item) => (
-              <ListItem key={item.id} data={item} />
+              <div key={item.id} >
+              <ListItem data={item} />
+            </div>
             ))}
           </div>
         </div>

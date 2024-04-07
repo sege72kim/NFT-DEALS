@@ -57,6 +57,10 @@ const NftBlock = (props) => {
     setShowInitialBlock(false);
   };
 
+  const handleBlocksSelection = (selectedBlocks) => {
+    console.log('Selected Blocks:', selectedBlocks);
+  };
+
   return (
     <div className="nftblock">
       <div className="info-text3">
@@ -116,7 +120,7 @@ const NftBlock = (props) => {
         {<FormattedMessage id='youcanselect' />}<strong>4 NFTs</strong>
         </div>
         <div>
-          <ListComponent data={props.data} searchtxt={<FormattedMessage id='searchnft'/>} />
+          <ListComponent data={props.data} searchtxt={<FormattedMessage id='searchnft'/>} onClickBlocks={handleBlocksSelection} />
         </div>
         <div className = "applybutton" onClick={() => setModalActive(false)}>
                 <p>{<FormattedMessage id='apply' />}</p>
