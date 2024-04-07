@@ -14,13 +14,14 @@
     opacity: 1;
 }
 .modalcontainernot{
-    display:flex;
-    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto; 
+  position: relative;
 }
 .modalnot_content{
-    position: fixed;
+    position: absolute;
     top: 70px; /* Оставляем фиксированный отступ сверху */
-    left: 62%; /* Снимаем фиксированное позиционирование слева */
+    right:10px; /* Снимаем фиксированное позиционирование слева */
     border-radius: 15px;
     background-color: #1E2024;
     width: 400px;
@@ -33,10 +34,31 @@
 .modalnot_content.active {
     transform: scale(1);
 }
-@media (max-width:1100px){
-    .modalnot_content{
-        padding-right: 20px;
-        left: auto;
-        right:0;
-    }
+
+/*LNG CSS*/
+
+.modalcontainerlg{
+    max-width: 1300px;
+    margin: 0 auto; 
+  position: relative;
+}
+.modallg_content{
+    position: absolute;
+    top: 70px; 
+    right:10px; 
+    margin-right:200px;
+    border-radius: 15px;
+    background-color: #1E2024;
+    width: 100px;
+    max-width: 100%; 
+    transition: 0.2s;
+    border: 1px solid #2D2F35;
+    transform: scale(0); 
+    
+}
+.modallg_content.active {
+    transform: scale(1);
+}
+@media (max-width:1300){
+    
 }

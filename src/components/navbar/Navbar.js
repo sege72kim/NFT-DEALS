@@ -1,20 +1,36 @@
 import "./style.css"
 import React, { useState } from 'react';
 import Notifications from "./notifications/notifications"
+import LNG from "./notifications/lng"
 import push from "./push.png"
 import logo from "./logo.png"
+import lng from "./lng.png"
 import { FormattedMessage } from 'react-intl'
-import { LOCALES } from '../../i18n/locales'
-import CustomSelect from "./customselect";
-function Navbar () {
+
+function Navbar ({ sendDataToParent }) {
     const [modalActive, setModalActive] = useState(false);
-    const languages = [
-        { name: 'English', code: LOCALES.ENGLISH },
-        { name: 'Русский', code: LOCALES.RUSSIAN },
-        { name: '中国人', code: LOCALES.CHINES },
-        { name: 'Español', code: LOCALES.SPANISH },
-        { name: 'عرب', code: LOCALES.ARAB }
-      ]
+    const [modalActive2, setModalActive2] = useState(false);
+    const sendData = () => {
+        const data = 'en';
+        sendDataToParent(data);
+      };
+      const sendData2 = () => {
+        const data = 'ru';
+        sendDataToParent(data);
+      };
+      const sendData3 = () => {
+        const data = 'chs';
+        sendDataToParent(data);
+      };
+      const sendData4 = () => {
+        const data = 'es';
+        sendDataToParent(data);
+      };
+      const sendData5 = () => {
+        const data = 'ar';
+        sendDataToParent(data);
+      };
+
     return (
         <nav className="nav">
         <div className="container">
@@ -24,7 +40,9 @@ function Navbar () {
                  <a href="./index.html" className="logotxt"><strong>HEX</strong> </a>
                  </div>
                 <ul className="nav-list">
-                <CustomSelect/>
+                <div class="pushbutton" onClick={() => setModalActive2(true)}>
+                            <img src={lng} className="push"></img>
+                 </div>
                 <div class="pushbutton" onClick={() => setModalActive(true)}>
                             <img src={push} className="push"></img>
                  </div>
@@ -71,6 +89,23 @@ function Navbar () {
             </div>
         </div>
         </Notifications>
+        <LNG active={modalActive2} setActive={setModalActive2}>
+        <div className="lngcomp" onClick={sendData}>
+            English
+        </div>
+        <div className="lngcomp2" onClick={sendData2}>
+            Русский
+        </div>
+        <div className="lngcomp2" onClick={sendData3}>
+            中国人
+        </div>
+        <div className="lngcomp2" onClick={sendData4}>
+            Español
+        </div>
+        <div className="lngcomp" onClick={sendData5}>
+        عرب
+        </div>
+        </LNG>
     </nav>
     );
 }

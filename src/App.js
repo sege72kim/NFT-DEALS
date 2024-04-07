@@ -6,16 +6,31 @@ import Dealsblock from "./components/dealsblock/Dealsblock"
 import { IntlProvider } from 'react-intl'
 import { LOCALES } from './i18n/locales'
 import { messages } from './i18n/messages'
+import { useState } from "react"
 
 function App() {
-  const options = ['Option 1', 'Option 2', 'Option 3'];
-  const locale = LOCALES.ENGLISH
+  const [dataFromChild, setDataFromChild] = useState('');
+  const handleDataFromChild = (data) => {
+    setDataFromChild(data);
+  };
+  let locale = LOCALES.ENGLISH;
+  if (dataFromChild === 'en') {
+    locale = LOCALES.ENGLISH;
+  } else if (dataFromChild === 'ru') {
+    locale = LOCALES.RUSSIAN;
+  } else if (dataFromChild === 'chs') {
+    locale = LOCALES.CHINES;
+  } else if (dataFromChild === 'es') {
+    locale = LOCALES.SPANISH;
+  } else if (dataFromChild === 'ar') {
+    locale = LOCALES.ARAB;
+  } 
 
     return (
     // <TonConnectUIProvider manifestUrl="http://localhost:3000/tonconnect-manifest.json">
     <IntlProvider messages={messages[locale]} locale='en' defaultLocale='en'>
      <div className="App"> 
-    <Navbar/>
+    <Navbar sendDataToParent={handleDataFromChild}/>
     <Header/>
     <Dealsblock/>
     </div> 

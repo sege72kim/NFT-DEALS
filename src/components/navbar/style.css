@@ -3,7 +3,6 @@
 .nav {
 	padding: 15px 0;
 	background-color: var(--nav-bg);
-	background-color: gray;
 	border-bottom: 1px solid var(--nav-border);
 	color: var(--nav-text);
 	letter-spacing: normal;
@@ -107,15 +106,19 @@
 	color: #96989E;
 }
 
-
-/* Custom select option */
-.dropdown{
+.lngcomp2{
+	border: 1px solid #2D2F35;
 }
-.dropdown .dropdown-btn {
-	padding:10px;
-	background-color: #2D2F35;
-	font-weight: bold;
-	color:white;
+.lngcomp,
+.lngcomp2{
 	display:flex;
-	align-items: center;
+	justify-content: center;
+	padding: 3px 2px;
+	font-size: 15px;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.lngcomp:hover,
+.lngcomp2:hover{
+	background-color: #3d4047;
 }
