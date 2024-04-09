@@ -6,6 +6,26 @@ import push from "./push.png";
 import logo from "./logo.png";
 import lng from "./lng.png";
 import { FormattedMessage } from "react-intl";
+import { TonConnectButton } from "@tonconnect/ui-react";
+import { THEME, TonConnectUI } from "@tonconnect/ui";
+
+const tonConnectUI = new TonConnectUI({
+  manifestUrl: "https://<YOUR_APP_URL>/tonconnect-manifest.json",
+  uiPreferences: {
+    colorsSet: {
+      [THEME.DARK]: {
+        connectButton: {
+          background: "#29CC6B",
+        },
+      },
+    },
+  },
+});
+tonConnectUI.uiOptions = {
+  uiPreferences: {
+    theme: THEME.DARK,
+  },
+};
 
 function Navbar({ sendDataToParent }) {
   const [modalActive, setModalActive] = useState(false);
@@ -56,18 +76,7 @@ function Navbar({ sendDataToParent }) {
             <div class="pushbutton" onClick={() => setModalActive(true)}>
               <img src={push} className="push" alt="Noftifications"></img>
             </div>
-            {isMobile ? (
-              <div href="#" className="round-buttonm">
-                <img
-                  className="round-buttonm"
-                  src="https://ouch-cdn2.icons8.com/njV9HbmnIAeeWK2Mr2u39BUSLIBf2f2jjNf93ghnw1g/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNTIx/LzYyOTBlMmU4LWQ2/NmMtNDgzMS1hOWFl/LTUwNDQ3M2ZkMWZj/NS5wbmc.png"
-                />
-              </div>
-            ) : (
-              <div href="#" className="round-button">
-                <FormattedMessage id="yourlink" />{" "}
-              </div>
-            )}
+            {isMobile ? <TonConnectButton /> : <TonConnectButton />}
           </ul>
         </div>
       </div>
