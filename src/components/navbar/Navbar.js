@@ -7,25 +7,6 @@ import logo from "./logo.png";
 import lng from "./lng.png";
 import { FormattedMessage } from "react-intl";
 import { TonConnectButton } from "@tonconnect/ui-react";
-import { THEME, TonConnectUI } from "@tonconnect/ui";
-
-const tonConnectUI = new TonConnectUI({
-  manifestUrl: "https://<YOUR_APP_URL>/tonconnect-manifest.json",
-  uiPreferences: {
-    colorsSet: {
-      [THEME.DARK]: {
-        connectButton: {
-          background: "#29CC6B",
-        },
-      },
-    },
-  },
-});
-tonConnectUI.uiOptions = {
-  uiPreferences: {
-    theme: THEME.DARK,
-  },
-};
 
 function Navbar({ sendDataToParent }) {
   const [modalActive, setModalActive] = useState(false);
