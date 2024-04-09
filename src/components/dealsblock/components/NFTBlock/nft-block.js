@@ -7,6 +7,7 @@ import HMSTR from "../../../../logos/HMSTR.jpg";
 import GRAM from "../../../../logos/GRAM.jpg";
 import TON from "../../../../logos/TON.jpg";
 import { FormattedMessage } from "react-intl";
+import defavatar from "../../../../logos/defavatar.png";
 
 const NftBlock = (props) => {
   const [userData, setUserData] = useState("");
@@ -53,7 +54,6 @@ const NftBlock = (props) => {
   };
 
   const handleBlocksSelection = (selectedBlocks) => {
-    console.log("Selected Blocks:", selectedBlocks);
     setSelectedBlocks(selectedBlocks);
     setModalActive(false);
   };
@@ -72,74 +72,64 @@ const NftBlock = (props) => {
           <div>
             {selectedBlocks.length === 0 && (
               <div className="pickedavatars">
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
+                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img className="avatarnft" src={defavatar} alt="nft" />
               </div>
             )}
 
             {selectedBlocks.length === 1 && (
               <div className="pickedavatars">
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
+                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img className="avatarnft" src={defavatar} alt="nft" />
                 {selectedBlocks.map((item) => (
-                  <img key={item.id} className="avatarnft" src={item.image} />
+                  <img
+                    key={item.id}
+                    className="avatarnft"
+                    src={item.image}
+                    alt="nft"
+                  />
                 ))}
               </div>
             )}
             {selectedBlocks.length === 2 && (
               <div className="pickedavatars">
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
+                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img className="avatarnft" src={defavatar} alt="nft" />
                 {selectedBlocks.map((item) => (
-                  <img key={item.id} className="avatarnft" src={item.image} />
+                  <img
+                    key={item.id}
+                    className="avatarnft"
+                    src={item.image}
+                    alt="nft"
+                  />
                 ))}
               </div>
             )}
             {selectedBlocks.length === 3 && (
               <div className="pickedavatars">
-                <img
-                  className="avatarnft"
-                  src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-                />
+                <img className="avatarnft" src={defavatar} alt="nft" />
                 {selectedBlocks.map((item) => (
-                  <img key={item.id} className="avatarnft" src={item.image} />
+                  <img
+                    key={item.id}
+                    className="avatarnft"
+                    src={item.image}
+                    alt="nft"
+                  />
                 ))}
               </div>
             )}
             {selectedBlocks.length === 4 && (
-              <div>
+              <div className="pickedavatars">
                 {selectedBlocks.map((item) => (
-                  <img key={item.id} className="avatarnft" src={item.image} />
+                  <img
+                    key={item.id}
+                    className="avatarnft"
+                    src={item.image}
+                    alt="nft"
+                  />
                 ))}
               </div>
             )}
@@ -159,30 +149,30 @@ const NftBlock = (props) => {
                 <div className="text-userData">
                   {userData && (
                     <div className="text-avatar">
-                      {userData} <img className="avatarnfts" src={TON} />
+                      {userData}{" "}
+                      <img className="avatarnfts" src={TON} alt="nft" />
                     </div>
                   )}
                 </div>
                 <div className="text-userData">
                   {userData2 && (
                     <div className="text-avatar">
-                      {userData2} <img className="avatarnfts" src={HMSTR} />
+                      {userData2}{" "}
+                      <img className="avatarnfts" src={HMSTR} alt="nft" />
                     </div>
                   )}
                 </div>
                 <div className="text-userData">
                   {userData3 && (
                     <div className="text-avatar">
-                      {userData3} <img className="avatarnfts" src={GRAM} />
+                      {userData3}{" "}
+                      <img className="avatarnfts" src={GRAM} alt="nft" />
                     </div>
                   )}
                 </div>
               </>
             ) : (
-              <img
-                className="avatarnft"
-                src="https://kartinki.pics/uploads/posts/2022-12/thumbs/1670431842_54-kartinkin-net-p-serii-kvadrat-kartinka-oboi-56.jpg"
-              />
+              <img className="avatarnfts" src={defavatar} alt="nft" />
             )}
           </div>
         </button>
@@ -236,6 +226,8 @@ const NftBlock = (props) => {
                 textsearch="Min 1 TON"
                 onInputChange={handleInputChange}
                 onApply={handleUserSearchApply}
+                balance={props.balanceTON}
+                balancename=" TON"
               />
             )}
             {selectedOption === "option2" && (
@@ -243,6 +235,8 @@ const NftBlock = (props) => {
                 textsearch="Min 1 HAMSTER"
                 onInputChange={handleInputChange2}
                 onApply={handleUserSearchApply2}
+                balance={props.balanceHMSTR}
+                balancename=" HMSTR"
               />
             )}
             {selectedOption === "option3" && (
@@ -250,6 +244,8 @@ const NftBlock = (props) => {
                 textsearch="Min 1 GRAM"
                 onInputChange={handleInputChange3}
                 onApply={handleUserSearchApply3}
+                balance={props.balanceGRAM}
+                balancename=" GRAM"
               />
             )}
             {selectedOption === "option0" && (

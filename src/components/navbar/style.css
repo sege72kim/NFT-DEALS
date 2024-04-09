@@ -1,124 +1,155 @@
 /* Nav */
 
 .nav {
-	padding: 15px 0;
-	background-color: var(--nav-bg);
-	border-bottom: 1px solid var(--nav-border);
-	color: var(--nav-text);
-	letter-spacing: normal;
+  padding: 15px 0;
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  color: var(--nav-text);
+  letter-spacing: normal;
 }
 
 .nav-row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	column-gap: 30px;
-	row-gap: 20px;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 }
 
 .logo {
-	margin-right: auto;
-	width: 40px;
-	height: 40px;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
 }
-.logotxt{
-	padding-left: 15px;
-	color: var(--nav-text);
-	font-size: 24px;
-	font-family: 'Poppins', sans-serif;
+.logotxt {
+  padding-left: 15px;
+  color: var(--nav-text);
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
 }
 .logo strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .nav-list {
-	display: flex;
-	flex-wrap: wrap;
-	row-gap: 10px;
-	align-items: center;
-	column-gap: 20px;
-	font-size: 16px;
-	font-weight: 500;
-	font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 .round-button {
-    display: inline-block;
-    padding: 8px 25px;
-    border-radius: 20px; 
-    background-color: #ffffff; 
-    color: #000000;
-    text-decoration: none; 
-    border: none; 
-    cursor: pointer; 
-	transition: opacity 0.2s ease-in;
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
 }
 
+.push {
+  height: 28px;
+  width: 28px;
+}
+.pushbutton {
+  padding: 6px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.pushbutton:hover {
+  background-color: #4b4e53;
+}
 
-.push{
-	height: 28px;
-	width: 28px;
-}
-.pushbutton{
-	padding: 6px;
-	border-radius: 20px;
-	transition: background-color 0.3s ease;
-	cursor: pointer;
-}
-.pushbutton:hover{
-	background-color: #4b4e53;
-}
-
-.nottxt{
-	color:#E9E9EB;
-	font-size: 23px;
-	font-weight: 700;
-	padding: 14px 0px;
-	padding-left: 20px;
-	
+.nottxt {
+  color: #e9e9eb;
+  font-size: 23px;
+  font-weight: 700;
+  padding: 14px 0px;
+  padding-left: 20px;
 }
 /*Compoinent time*/
-.notcomp{
-	display:flex;
-	justify-content: center;
-	padding: 15px 0px;
-	border: 1px solid #2D2F35;
+.notcomp {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+  border: 1px solid #2d2f35;
 }
-.notcomp{
-	align-items: center;
+.notcomp {
+  align-items: center;
 }
-.notpng{
-	width: 50px;
-	height: 50px;
-	border-radius: 10px;
-	margin-right: 20px;
+.notpng {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
-.notcomptxth{
-	font-weight: 700;
+.notcomptxth {
+  font-weight: 700;
 }
-.notcomptxth a{
-	color: #0B87D0;
+.notcomptxth a {
+  color: #0b87d0;
+}
+.notcomptxtdata {
+  font-size: 14px;
+  font-weight: 600;
+  color: #96989e;
+}
 
-}
-.notcomptxtdata{
-	font-size: 14px;
-	font-weight: 600;
-	color: #96989E;
-}
-
-.lngcomp2{
-	border: 1px solid #2D2F35;
+.lngcomp2 {
+  border: 1px solid #2d2f35;
 }
 .lngcomp,
-.lngcomp2{
-	display:flex;
-	justify-content: center;
-	padding: 3px 2px;
-	font-size: 15px;
-	transition: background-color 0.3s ease;
-	cursor: pointer;
+.lngcomp2 {
+  display: flex;
+  justify-content: center;
+  padding: 3px 2px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 .lngcomp:hover,
-.lngcomp2:hover{
-	background-color: #3d4047;
+.lngcomp2:hover {
+  background-color: #3d4047;
+}
+.round-buttonm {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 20px;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+@media (max-width: 600px) {
+  .push {
+    height: 23px;
+    width: 23px;
+  }
+  .logo {
+    margin-right: auto;
+    width: 32px;
+    height: 32px;
+  }
+  .logotxt {
+    padding-left: 10px;
+    color: var(--nav-text);
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .nav-list {
+    row-gap: 10px;
+    column-gap: 12px;
+  }
 }

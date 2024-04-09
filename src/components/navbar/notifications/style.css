@@ -1,64 +1,70 @@
-.modalnot{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.2s;
+.modalnot {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
 }
-.modalnot.active{
-    pointer-events: all;
-    opacity: 1;
+.modalnot.active {
+  pointer-events: all;
+  opacity: 1;
 }
-.modalcontainernot{
-    max-width: 1300px;
-    margin: 0 auto; 
+.modalcontainernot {
+  max-width: 1300px;
+  margin: 0 auto;
   position: relative;
 }
-.modalnot_content{
-    position: absolute;
-    top: 70px; /* Оставляем фиксированный отступ сверху */
-    right:10px; /* Снимаем фиксированное позиционирование слева */
-    border-radius: 15px;
-    background-color: #1E2024;
-    width: 400px;
-    max-width: 100%; /* Ограничиваем максимальную ширину до 100% */
-    transition: 0.2s;
-    border: 1px solid #2D2F35;
-    transform: scale(0); /* Сдвигаем обратно на половину ширины элемента */
-    
+.modalnot_content {
+  position: absolute;
+  top: 70px; /* Оставляем фиксированный отступ сверху */
+  right: 10px; /* Снимаем фиксированное позиционирование слева */
+  border-radius: 15px;
+  background-color: #1e2024;
+  width: 400px;
+  max-width: 100%; /* Ограничиваем максимальную ширину до 100% */
+  transition: 0.2s;
+  border: 1px solid #2d2f35;
+  transform: scale(0); /* Сдвигаем обратно на половину ширины элемента */
 }
 .modalnot_content.active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 /*LNG CSS*/
 
-.modalcontainerlg{
-    max-width: 1300px;
-    margin: 0 auto; 
+.modalcontainerlg {
+  max-width: 1300px;
+  margin: 0 auto;
   position: relative;
 }
-.modallg_content{
-    position: absolute;
-    top: 70px; 
-    right:10px; 
-    margin-right:200px;
-    border-radius: 15px;
-    background-color: #1E2024;
-    width: 100px;
-    max-width: 100%; 
-    transition: 0.2s;
-    border: 1px solid #2D2F35;
-    transform: scale(0); 
-    
+.modallg_content {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  margin-right: 200px;
+  border-radius: 15px;
+  background-color: #1e2024;
+  width: 100px;
+  max-width: 100%;
+  transition: 0.2s;
+  border: 1px solid #2d2f35;
+  transform: scale(0);
 }
 .modallg_content.active {
-    transform: scale(1);
+  transform: scale(1);
 }
-@media (max-width:1300){
-    
+
+@media (max-width: 767px) {
+  .modallg_content {
+    margin-right: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .modallg_content {
+    margin-right: 70px;
+  }
 }

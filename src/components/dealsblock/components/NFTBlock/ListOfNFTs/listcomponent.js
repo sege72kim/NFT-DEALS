@@ -14,6 +14,7 @@ function ListComponent({ data, onClickBlocks }) {
   };
 
   const [searchQuery, setSearchQuery] = useState("");
+  const [isFullSelection, setIsFullSelection] = useState(false); // Добавлено состояние для отслеживания выбора четырех элементов
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -22,12 +23,17 @@ function ListComponent({ data, onClickBlocks }) {
   const [selectedBlocks, setSelectedBlocks] = useState([]);
 
   const handleClick = (blockData) => {
-    // Если блок уже выбран, удаляем его из массива выбранных блоков
-    if (selectedBlocks.includes(blockData)) {
-      setSelectedBlocks(selectedBlocks.filter((item) => item !== blockData));
-    } else {
-      // Иначе добавляем блок в массив выбранных блоков
-      setSelectedBlocks([...selectedBlocks, blockData]);
+    if (selectedBlocks.length < 4 || selectedBlocks.includes(blockData)) {
+      const index = selectedBlocks.findIndex(
+        (item) => item.id === blockData.id
+      );
+      if (index !== -1) {
+        setSelectedBlocks(
+          selectedBlocks.filter((item) => item.id !== blockData.id)
+        );
+      } else {
+        setSelectedBlocks([...selectedBlocks, blockData]);
+      }
     }
   };
 
@@ -55,6 +61,9 @@ function ListComponent({ data, onClickBlocks }) {
             <p>{<FormattedMessage id="notenought2" />}</p>
           </div>
         </div>
+        <button className="applybutton2">
+          <p>{<FormattedMessage id="apply" />}</p>
+        </button>
       </div>
     );
   }
@@ -83,7 +92,17 @@ function ListComponent({ data, onClickBlocks }) {
           <div className="scrollbar2">
             {filteredData.map((item) => (
               <div key={item.id} onClick={() => handleClick(item)}>
-                <ListItem data={item} />
+                <ListItem
+                  data={item}
+                  isSelected={selectedBlocks.some(
+                    (block) => block.id === item.id
+                  )}
+                  onItemClick={handleClick}
+                  disabled={
+                    selectedBlocks.length >= 4 && !selectedBlocks.includes(item)
+                  }
+                  isFullSelection={isFullSelection} // Передаем состояние выбора четырех элементов
+                />
               </div>
             ))}
           </div>
@@ -121,6 +140,9 @@ function ListComponent({ data, onClickBlocks }) {
             <p>{<FormattedMessage id="notfound2" />}</p>
           </div>
         </div>
+        <button className="applybutton2">
+          <p>{<FormattedMessage id="apply" />}</p>
+        </button>
       </div>
     );
   } else {
@@ -142,15 +164,27 @@ function ListComponent({ data, onClickBlocks }) {
           <div className="scrollbar2">
             {data.map((item) => (
               <div key={item.id} onClick={() => handleClick(item)}>
-                <ListItem data={item} />
+                <ListItem
+                  data={item}
+                  isSelected={selectedBlocks.some(
+                    (block) => block.id === item.id
+                  )}
+                  onItemClick={handleClick}
+                  disabled={
+                    selectedBlocks.length >= 4 && !selectedBlocks.includes(item)
+                  }
+                  isFullSelection={isFullSelection} // Передаем состояние выбора четырех элементов
+                />
               </div>
             ))}
-            <button
-              className="applybutton"
-              onClick={() => onClickBlocks(selectedBlocks)}
-            >
-              <p>{<FormattedMessage id="apply" />}</p>
-            </button>
+            <div className="applybuttoncontainer">
+              <button
+                className="applybutton"
+                onClick={() => onClickBlocks(selectedBlocks)}
+              >
+                <p>{<FormattedMessage id="apply" />}</p>
+              </button>
+            </div>
           </div>
         </div>
       </div>

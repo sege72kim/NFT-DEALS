@@ -158,17 +158,20 @@
 }
 
 .avatarnft {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   margin-right: 20px;
-  border: 3px solid #1e2024;
+  border: 3px solid transparent;
   position: relative;
-  background-color: #16181c;
+  background-color: #1e2024;
+}
+.button:hover .avatarnft {
+  background-color: #27292e;
 }
 .avatarnfts {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 20px;
   border: 3px solid #1e2024;
@@ -179,6 +182,7 @@
 .text-avatar {
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 .pickedavatars img:not(:last-child) {
   margin-right: -20px; /* Регулируйте этот отрицательный отступ, чтобы получить желаемый эффект перекрытия */
