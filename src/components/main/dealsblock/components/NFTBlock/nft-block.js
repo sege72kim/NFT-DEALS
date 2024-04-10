@@ -3,11 +3,11 @@ import ListComponent from "./ListOfNFTs/listcomponent";
 import Modal from "../../../modalBlock/modal";
 import "./style.css";
 import UserSearch from "../SearchBlock/user-search";
-import HMSTR from "../../../../logos/HMSTR.jpg";
-import GRAM from "../../../../logos/GRAM.jpg";
-import TON from "../../../../logos/TON.jpg";
+import HMSTR from "../../../../../logos/HMSTR.jpg";
+import GRAM from "../../../../../logos/GRAM.jpg";
+import TON from "../../../../../logos/TON.jpg";
 import { FormattedMessage } from "react-intl";
-import defavatar from "../../../../logos/defavatar.png";
+import defavatar from "../../../../../logos/defavatar.png";
 
 const NftBlock = (props) => {
   const [userData, setUserData] = useState("");

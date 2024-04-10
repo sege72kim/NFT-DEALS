@@ -9,7 +9,7 @@ const InfoBlock = (props) => {
       />
       <div className="content-container">
         <p className="little-text">{props.who}</p>
-        <h1 className="little-text2">{props.username}</h1>
+        <p className="little-text2">{props.username}</p>
       </div>
       <div className="column-container">
         <h3 className="little-text3">HMSTR</h3>

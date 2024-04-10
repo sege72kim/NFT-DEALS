@@ -7,6 +7,7 @@ import logo from "./logo.png";
 import lng from "./lng.png";
 import { FormattedMessage } from "react-intl";
 import { TonConnectButton } from "@tonconnect/ui-react";
+import { Link } from "react-router-dom";
 
 function Navbar({ sendDataToParent }) {
   const [modalActive, setModalActive] = useState(false);
@@ -46,9 +47,9 @@ function Navbar({ sendDataToParent }) {
         <div className="nav-row">
           <div>
             <img href="./index.html" src={logo} className="logo" alt="logo" />
-            <a href="./index.html" className="logotxt">
+            <Link to="/" className="logotxt">
               <strong>HEX</strong>{" "}
-            </a>
+            </Link>
           </div>
           <ul className="nav-list">
             <div class="pushbutton" onClick={() => setModalActive2(true)}>

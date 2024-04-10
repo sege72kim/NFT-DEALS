@@ -1,14 +1,15 @@
 import "./styles/main.css";
 import "./styles/reset.css";
 import Navbar from "./components/navbar/Navbar";
-import Header from "./components/header/Header";
-import Dealsblock from "./components/dealsblock/Dealsblock";
 import { IntlProvider } from "react-intl";
 import { LOCALES } from "./i18n/locales";
 import { messages } from "./i18n/messages";
 import { useState } from "react";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
-import { TonConnectButton } from "@tonconnect/ui-react";
+import { Routes, Route } from "react-router-dom";
+import Main from "./components/main/main";
+import History from "./components/history/history";
+
 function App() {
   const [dataFromChild, setDataFromChild] = useState("");
   const handleDataFromChild = (data) => {
@@ -30,11 +31,11 @@ function App() {
   return (
     <TonConnectUIProvider manifestUrl="http://localhost:3000/tonconnect-manifest.json">
       <IntlProvider messages={messages[locale]} locale="en" defaultLocale="en">
-        <div className="App">
-          <Navbar sendDataToParent={handleDataFromChild} />
-          <Header />
-          <Dealsblock />
-        </div>
+        <Navbar sendDataToParent={handleDataFromChild} />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
       </IntlProvider>
     </TonConnectUIProvider>
   );
