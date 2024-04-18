@@ -1,9 +1,9 @@
-import InfoBlock from "./components/Infoblock/info-block";
-import NftBlock from "./components/NFTBlock/nft-block";
-import data from "./components/NFTBlock/ListOfNFTs/data";
+import data from "../../../../data";
 import "./style.css";
 import { FormattedMessage } from "react-intl";
 import { useTonAddress } from "@tonconnect/ui-react";
+import InfoBlock from "../components/infoblock/info-block";
+import NftBlock from "../components/nftBlock/nft-block";
 
 const DealsblockDesktop = () => {
   const userFriendlyAddress = useTonAddress();

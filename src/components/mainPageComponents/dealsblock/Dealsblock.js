@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import DealsblockMobile from './DealblockMobile';
-import DealsblockDesktop from './DealsblockDesktop';
+import React, { useState, useEffect } from "react";
+import DealsblockDesktop from "./containers/DealsblockDesktop";
+import DealsblockMobile from "./containers/DealblockMobile";
 
 const DealsBlock = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -10,10 +10,10 @@ const DealsBlock = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

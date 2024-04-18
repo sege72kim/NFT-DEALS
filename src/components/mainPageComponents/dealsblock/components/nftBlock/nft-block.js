@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import ListComponent from "./ListOfNFTs/listcomponent";
-import Modal from "../../../modalBlock/modal";
+import Modal from "../../../../../utils/modalBlock/modal";
 import "./style.css";
-import UserSearch from "../SearchBlock/user-search";
-import HMSTR from "../../../../../logos/HMSTR.jpg";
-import GRAM from "../../../../../logos/GRAM.jpg";
-import TON from "../../../../../logos/TON.jpg";
+import UserSearch from "../../../../../utils/inputNftBar/User_search";
 import { FormattedMessage } from "react-intl";
-import defavatar from "../../../../../logos/defavatar.png";
 
 const NftBlock = (props) => {
   const [userData, setUserData] = useState("");
@@ -72,18 +68,46 @@ const NftBlock = (props) => {
           <div>
             {selectedBlocks.length === 0 && (
               <div className="pickedavatars">
-                <img className="avatarnft" src={defavatar} alt="nft" />
-                <img className="avatarnft" src={defavatar} alt="nft" />
-                <img className="avatarnft" src={defavatar} alt="nft" />
-                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
               </div>
             )}
 
             {selectedBlocks.length === 1 && (
               <div className="pickedavatars">
-                <img className="avatarnft" src={defavatar} alt="nft" />
-                <img className="avatarnft" src={defavatar} alt="nft" />
-                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
                 {selectedBlocks.map((item) => (
                   <img
                     key={item.id}
@@ -96,8 +120,16 @@ const NftBlock = (props) => {
             )}
             {selectedBlocks.length === 2 && (
               <div className="pickedavatars">
-                <img className="avatarnft" src={defavatar} alt="nft" />
-                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
                 {selectedBlocks.map((item) => (
                   <img
                     key={item.id}
@@ -110,7 +142,11 @@ const NftBlock = (props) => {
             )}
             {selectedBlocks.length === 3 && (
               <div className="pickedavatars">
-                <img className="avatarnft" src={defavatar} alt="nft" />
+                <img
+                  className="avatarnft"
+                  src="./imgs/defavatar.png"
+                  alt="nft"
+                />
                 {selectedBlocks.map((item) => (
                   <img
                     key={item.id}
@@ -150,7 +186,11 @@ const NftBlock = (props) => {
                   {userData && (
                     <div className="text-avatar">
                       {userData}{" "}
-                      <img className="avatarnfts" src={TON} alt="nft" />
+                      <img
+                        className="avatarnfts"
+                        src="./imgs/TON.jpg"
+                        alt="nft"
+                      />
                     </div>
                   )}
                 </div>
@@ -158,7 +198,11 @@ const NftBlock = (props) => {
                   {userData2 && (
                     <div className="text-avatar">
                       {userData2}{" "}
-                      <img className="avatarnfts" src={HMSTR} alt="nft" />
+                      <img
+                        className="avatarnfts"
+                        src="./imgs/HMSTR.jpg"
+                        alt="nft"
+                      />
                     </div>
                   )}
                 </div>
@@ -166,13 +210,21 @@ const NftBlock = (props) => {
                   {userData3 && (
                     <div className="text-avatar">
                       {userData3}{" "}
-                      <img className="avatarnfts" src={GRAM} alt="nft" />
+                      <img
+                        className="avatarnfts"
+                        src="./imgs/GRAM.jpg"
+                        alt="nft"
+                      />
                     </div>
                   )}
                 </div>
               </>
             ) : (
-              <img className="avatarnfts" src={defavatar} alt="nft" />
+              <img
+                className="avatarnfts"
+                src="./imgs/defavatar.png"
+                alt="nft"
+              />
             )}
           </div>
         </button>

@@ -1,5 +1,4 @@
 import React from "react";
-import check from "./../check.png";
 function ListItem({
   data,
   isSelected,
@@ -13,7 +12,11 @@ function ListItem({
       onClick={() => onItemClick(data)}
     >
       <div className="selection-checkbox" onClick={() => onItemClick(data)}>
-        {isSelected ? <img className="check" alt="✔" src={check} /> : ""}
+        {isSelected ? (
+          <img className="check" alt="✔" src="./imgs/check" />
+        ) : (
+          ""
+        )}
       </div>
       <img className="avatar" src={data.image} alt={data.name} />
       <div className="nfttextblock">

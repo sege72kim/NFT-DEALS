@@ -2,14 +2,10 @@ import "./style.css";
 import React, { useState, useEffect } from "react";
 import Notifications from "./notifications/notifications";
 import LNG from "./notifications/lng";
-import push from "./push.png";
-import logo from "./logo.png";
-import lng from "./lng.png";
 import { FormattedMessage } from "react-intl";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { Link } from "react-router-dom";
 import { useTonWallet } from "@tonconnect/ui-react";
-import { Locales, useTonConnectUI } from "@tonconnect/ui-react";
 
 function Navbar({ sendDataToParent }) {
   const [modalActive, setModalActive] = useState(false);
@@ -48,19 +44,32 @@ function Navbar({ sendDataToParent }) {
       <div className="container">
         <div className="nav-row">
           <div>
-            <img href="./index.html" src={logo} className="logo" alt="logo" />
+            <img
+              href="./index.html"
+              src="./imgs/logo.png"
+              className="logo"
+              alt="logo"
+            />
             <Link to="/" className="logotxt">
               <strong>HEX</strong>{" "}
             </Link>
           </div>
           <ul className="nav-list">
             <div class="pushbutton" onClick={() => setModalActive2(true)}>
-              <img src={lng} className="push" alt="Noftifications"></img>
+              <img
+                src="./imgs/lng.png"
+                className="push"
+                alt="Noftifications"
+              ></img>
             </div>
             {wallet ? (
               <div>
                 <div class="pushbutton" onClick={() => setModalActive(true)}>
-                  <img src={push} className="push" alt="Noftifications"></img>
+                  <img
+                    src="./imgs/push.png"
+                    className="push"
+                    alt="Noftifications"
+                  ></img>
                 </div>
               </div>
             ) : (

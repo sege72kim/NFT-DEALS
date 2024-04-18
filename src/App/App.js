@@ -1,14 +1,14 @@
-import "./styles/main.css";
-import "./styles/reset.css";
-import Navbar from "./components/navbar/Navbar";
+import "../main.css";
+import "../reset.css";
 import { IntlProvider } from "react-intl";
-import { LOCALES } from "./i18n/locales";
-import { messages } from "./i18n/messages";
+import { LOCALES } from "../i18n/locales";
+import { messages } from "../i18n/messages";
 import { useState } from "react";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { Routes, Route } from "react-router-dom";
-import Main from "./components/main/main";
-import History from "./components/history/history";
+import Main from "../pages/main/Main";
+import History from "../pages/profile/History";
+import Navbar from "../components/navbar/Navbar";
 
 function App() {
   const [dataFromChild, setDataFromChild] = useState("");
