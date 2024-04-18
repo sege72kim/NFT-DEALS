@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@tonconnect/ui": "^2.0.0",
     "@tonconnect/ui-react": "^2.0.0",
+    "eruda": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.6.5",
@@ -41,6 +42,11 @@
     ]
   },
   "devDependencies": {
-    "prettier": "3.2.5"
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18.2.24",
+    "prettier": "3.2.5",
+    "typescript": "^5.4.5"
   }
 }

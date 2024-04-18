@@ -8,6 +8,8 @@ import lng from "./lng.png";
 import { FormattedMessage } from "react-intl";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { Link } from "react-router-dom";
+import { useTonWallet } from "@tonconnect/ui-react";
+import { Locales, useTonConnectUI } from "@tonconnect/ui-react";
 
 function Navbar({ sendDataToParent }) {
   const [modalActive, setModalActive] = useState(false);
@@ -40,7 +42,7 @@ function Navbar({ sendDataToParent }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  const wallet = useTonWallet();
   return (
     <nav className="nav">
       <div className="container">
@@ -55,9 +57,15 @@ function Navbar({ sendDataToParent }) {
             <div class="pushbutton" onClick={() => setModalActive2(true)}>
               <img src={lng} className="push" alt="Noftifications"></img>
             </div>
-            <div class="pushbutton" onClick={() => setModalActive(true)}>
-              <img src={push} className="push" alt="Noftifications"></img>
-            </div>
+            {wallet ? (
+              <div>
+                <div class="pushbutton" onClick={() => setModalActive(true)}>
+                  <img src={push} className="push" alt="Noftifications"></img>
+                </div>
+              </div>
+            ) : (
+              <span />
+            )}
             {isMobile ? <TonConnectButton /> : <TonConnectButton />}
           </ul>
         </div>

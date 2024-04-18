@@ -16,8 +16,10 @@ const Header = () => {
         </div>
       </div>
       <div className="right-header">
-        <Link to="/history" className="rectangle-button">
-          <FormattedMessage id="cmplttr" />
+        <Link to="/history">
+          <div className="rectangle-button">
+            <FormattedMessage id="cmplttr" />
+          </div>
         </Link>
       </div>
     </section>

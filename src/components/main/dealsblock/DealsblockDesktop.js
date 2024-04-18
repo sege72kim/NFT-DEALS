@@ -7,12 +7,9 @@ import { useTonAddress } from "@tonconnect/ui-react";
 
 const DealsblockDesktop = () => {
   const userFriendlyAddress = useTonAddress();
-  const rawAddress = useTonAddress(false);
   const userData = data.find((user) => user.username === "UserName 228");
   const userData2 = data.find((user) => user.username === "UserName 223");
   return (
-    /*<UserSearch textsearch = "Choose user for deal" />*/
-    /* <InfoBlock who="Recipient"/> */
     <section className="dealsblock">
       <div className="container3">
         <InfoBlock
