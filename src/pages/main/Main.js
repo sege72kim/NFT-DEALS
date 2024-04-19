@@ -1,7 +1,7 @@
 import React from "react";
 import { useTonWallet } from "@tonconnect/ui-react";
-import DealsBlock from "../../components/mainPageComponents/dealsblock/Dealsblock";
-import Header from "../../components/mainPageComponents/header/Header";
+import DealsBlock from "../../components/mainPage/dealsblock/Dealsblock";
+import Header from "../../components/mainPage/header/Header";
 import Registration from "../registration/Registration";
 
 const Main = () => {

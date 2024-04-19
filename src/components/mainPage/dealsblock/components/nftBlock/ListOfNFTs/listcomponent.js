@@ -14,7 +14,7 @@ function ListComponent({ data, onClickBlocks }) {
   };
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [isFullSelection, setIsFullSelection] = useState(false); // Добавлено состояние для отслеживания выбора четырех элементов
+  const [isFullSelection] = useState(false); // Добавлено состояние для отслеживания выбора четырех элементов
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);

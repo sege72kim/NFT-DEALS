@@ -7,7 +7,7 @@ import { useState } from "react";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { Routes, Route } from "react-router-dom";
 import Main from "../pages/main/Main";
-import History from "../pages/profile/History";
+import Profile from "../pages/profile/Profile";
 import Navbar from "../components/navbar/Navbar";
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
         <Navbar sendDataToParent={handleDataFromChild} />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/history" element={<History />} />
+          <Route path="/history" element={<Profile />} />
         </Routes>
       </IntlProvider>
     </TonConnectUIProvider>
