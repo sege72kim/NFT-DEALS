@@ -5,7 +5,7 @@ import UserNftBlock from "../../components/profile/userNftBlock/userNftBlock";
 import "./style.css";
 import React, { useState } from "react";
 const Profile = () => {
-  const [Option, setOption] = useState("sales");
+  const [Option, setOption] = useState("hmstr");
 
   const handleOptionChange = (newOption) => {
     setOption(newOption);
