@@ -13,7 +13,7 @@ function ListItem({
     >
       <div className="selection-checkbox" onClick={() => onItemClick(data)}>
         {isSelected ? (
-          <img className="check" alt="✔" src="./imgs/check" />
+          <img className="check" alt="✔" src="./images/check" />
         ) : (
           ""
         )}

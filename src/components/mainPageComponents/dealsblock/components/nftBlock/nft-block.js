@@ -70,22 +70,22 @@ const NftBlock = (props) => {
               <div className="pickedavatars">
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
               </div>
@@ -95,17 +95,17 @@ const NftBlock = (props) => {
               <div className="pickedavatars">
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 {selectedBlocks.map((item) => (
@@ -122,12 +122,12 @@ const NftBlock = (props) => {
               <div className="pickedavatars">
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 {selectedBlocks.map((item) => (
@@ -144,7 +144,7 @@ const NftBlock = (props) => {
               <div className="pickedavatars">
                 <img
                   className="avatarnft"
-                  src="./imgs/defavatar.png"
+                  src="./images/defavatar.png"
                   alt="nft"
                 />
                 {selectedBlocks.map((item) => (
@@ -188,7 +188,7 @@ const NftBlock = (props) => {
                       {userData}{" "}
                       <img
                         className="avatarnfts"
-                        src="./imgs/TON.jpg"
+                        src="./images/TON.jpg"
                         alt="nft"
                       />
                     </div>
@@ -200,7 +200,7 @@ const NftBlock = (props) => {
                       {userData2}{" "}
                       <img
                         className="avatarnfts"
-                        src="./imgs/HMSTR.jpg"
+                        src="./images/HMSTR.jpg"
                         alt="nft"
                       />
                     </div>
@@ -212,7 +212,7 @@ const NftBlock = (props) => {
                       {userData3}{" "}
                       <img
                         className="avatarnfts"
-                        src="./imgs/GRAM.jpg"
+                        src="./images/GRAM.jpg"
                         alt="nft"
                       />
                     </div>
@@ -222,7 +222,7 @@ const NftBlock = (props) => {
             ) : (
               <img
                 className="avatarnfts"
-                src="./imgs/defavatar.png"
+                src="./images/defavatar.png"
                 alt="nft"
               />
             )}

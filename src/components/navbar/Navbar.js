@@ -46,7 +46,7 @@ function Navbar({ sendDataToParent }) {
           <div>
             <img
               href="./index.html"
-              src="./imgs/logo.png"
+              src="./images/logo.png"
               className="logo"
               alt="logo"
             />
@@ -57,7 +57,7 @@ function Navbar({ sendDataToParent }) {
           <ul className="nav-list">
             <div class="pushbutton" onClick={() => setModalActive2(true)}>
               <img
-                src="./imgs/lng.png"
+                src="./images/lng.png"
                 className="push"
                 alt="Noftifications"
               ></img>
@@ -66,7 +66,7 @@ function Navbar({ sendDataToParent }) {
               <div>
                 <div class="pushbutton" onClick={() => setModalActive(true)}>
                   <img
-                    src="./imgs/push.png"
+                    src="./images/push.png"
                     className="push"
                     alt="Noftifications"
                   ></img>
@@ -75,7 +75,7 @@ function Navbar({ sendDataToParent }) {
             ) : (
               <span />
             )}
-            {isMobile ? <TonConnectButton /> : <TonConnectButton />}
+            {wallet ? <TonConnectButton /> : <TonConnectButton />}
           </ul>
         </div>
       </div>

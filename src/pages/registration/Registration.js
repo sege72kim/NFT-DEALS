@@ -17,7 +17,7 @@ const Registration = () => {
   return (
     <div className="registration">
       <div className="reg-avatars">
-        <div className="reg-between">2</div>
+        <img className="slider-image" src="./images/rex.gif" alt="" />
       </div>
       <div className="reg-text">
         <div className="reg-text1">HAMSTER EXCHANGE</div>
