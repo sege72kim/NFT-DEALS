@@ -47,8 +47,11 @@
 .reg-text1 {
   font-size: 30px;
   font-weight: 700;
-  color: #e9e9eb;
+  color: #ffffff;
   margin-bottom: 5px;
+}
+.reg-text1 strong {
+  color: #dac1ad;
 }
 .reg-text2 {
   color: #b9bbc1;

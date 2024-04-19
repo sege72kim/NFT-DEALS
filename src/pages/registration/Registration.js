@@ -20,7 +20,9 @@ const Registration = () => {
         <img className="slider-image" src="./images/rex.gif" alt="" />
       </div>
       <div className="reg-text">
-        <div className="reg-text1">HEX</div>
+        <div className="reg-text1">
+          <strong>H</strong>AMSTER <strong>EX</strong>CHANGE
+        </div>
         <div className="reg-text2">
           <FormattedMessage id="garant" />
         </div>
