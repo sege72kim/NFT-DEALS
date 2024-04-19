@@ -20,7 +20,7 @@ const Registration = () => {
         <img className="slider-image" src="./images/rex.gif" alt="" />
       </div>
       <div className="reg-text">
-        <div className="reg-text1">HAMSTER EXCHANGE</div>
+        <div className="reg-text1">HEX</div>
         <div className="reg-text2">
           <FormattedMessage id="garant" />
         </div>

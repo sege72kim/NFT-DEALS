@@ -75,7 +75,13 @@ function Navbar({ sendDataToParent }) {
             ) : (
               <span />
             )}
-            {wallet ? <TonConnectButton /> : <TonConnectButton />}
+            {
+              wallet ? (
+                <TonConnectButton />
+              ) : (
+                <TonConnectButton />
+              ) /* ВОТ ТУТ РАБОТАТЬ АЛИНА, ВОТ ЭТОТ БЛОК ТОНКОННЕКТ БУТТОН УБИРАЕШЬ И ДЕЛАЕШЬ ТУДА КАСТОМНУЮ КНОПКУ */
+            }
           </ul>
         </div>
       </div>
