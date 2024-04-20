@@ -1,6 +1,7 @@
 .user_info_block {
   background-color: #16181c;
   width: 400px;
+  max-height: 380px;
   border-radius: 20px;
   border: 1px solid #343940;
 }

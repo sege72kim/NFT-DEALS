@@ -27,6 +27,14 @@ export const messages = {
     choosecryptodeal: "Choose crypto for deal",
     senddeal: "Send Deal",
     balance: "Balance: ",
+    notenough_p: "No NFTs yet",
+    notenought1_p: "Your NFTs will appear here",
+    notfound1_p: "Looks like we dont have this NFT on our marketplace",
+    notenough_jetton: "No Jettons yet",
+    notenought1_jetton: "Your jettons will appear here",
+    notfound_jetton: "Jetton not found",
+    notfound1_jetton:
+      "Looks like we dont have this type of Jetton on our marketplace or you dont have it",
   },
   [LOCALES.RUSSIAN]: {
     searchnft: "Найти NFT",

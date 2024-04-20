@@ -188,7 +188,7 @@ const NftBlock = (props) => {
                       {userData}{" "}
                       <img
                         className="avatarnfts"
-                        src="./images/TON.jpg"
+                        src="./images/jettons/TON.jpg"
                         alt="nft"
                       />
                     </div>
@@ -200,7 +200,7 @@ const NftBlock = (props) => {
                       {userData2}{" "}
                       <img
                         className="avatarnfts"
-                        src="./images/HMSTR.jpg"
+                        src="./images/jettons/HMSTR.jpg"
                         alt="nft"
                       />
                     </div>
@@ -212,7 +212,7 @@ const NftBlock = (props) => {
                       {userData3}{" "}
                       <img
                         className="avatarnfts"
-                        src="./images/GRAM.jpg"
+                        src="./images/jettons/GRAM.jpg"
                         alt="nft"
                       />
                     </div>

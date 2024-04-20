@@ -2,20 +2,19 @@ import TruncateText from "../../../utils/truncateText";
 import "./style.css";
 import { useTonAddress } from "@tonconnect/ui-react";
 import React, { useState } from "react";
+import { useTonWallet } from "@tonconnect/ui-react";
 
 const copyToClipboard = (text) => {
   navigator.clipboard.writeText(text);
 };
 
 const InfoUserBlock = () => {
+  const wallet = useTonWallet();
   const userFriendlyAddress = useTonAddress();
 
   const handleClick = () => {
-    const textToCopy = "Ваш текст для копирования";
-    copyToClipboard(textToCopy);
+    copyToClipboard(userFriendlyAddress);
     setIcon("done");
-
-    // через 3 секунды возвращаем старую иконку
     setTimeout(() => {
       setIcon("copy");
     }, 3000);
@@ -43,7 +42,7 @@ const InfoUserBlock = () => {
         <div className="info_blocks2">
           <div className="info_block">
             <div className="info_blocks_text1">HMSTR balance</div>
-            <div className="info_blocks_text2">33</div>
+            <div className="info_blocks_text2">22</div>
           </div>
           <div className="info_block">
             <div className="info_blocks_text1">Wallet balance</div>
