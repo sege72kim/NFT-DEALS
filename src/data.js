@@ -7,7 +7,7 @@ const data = [
     jettons: [
       {
         id: 1,
-        ammount: 23,
+        ammount: 3225380910.333,
         type: "HMSTR",
         image: "./images/jettons/HMSTR.jpg",
       },
@@ -19,7 +19,7 @@ const data = [
       },
       {
         id: 3,
-        ammount: 23,
+        ammount: 344333333,
         type: "TON",
         image: "./images/jettons/TON.jpg",
       },

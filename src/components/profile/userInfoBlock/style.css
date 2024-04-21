@@ -64,4 +64,6 @@
   font-size: 20px;
   color: #dee1e9;
   margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
