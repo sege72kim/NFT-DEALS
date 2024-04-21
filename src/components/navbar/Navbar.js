@@ -6,6 +6,131 @@ import { FormattedMessage } from "react-intl";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { Link } from "react-router-dom";
 import { useTonWallet } from "@tonconnect/ui-react";
+import { FaCopy } from "react-icons/fa";
+import { GrLanguage } from "react-icons/gr";
+import { AiOutlineBgColors } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
+import { TbLogout2 } from "react-icons/tb";
+import { IoIosMenu } from "react-icons/io";
+import { CSSTransition } from "react-transition-group";
+import { IoChevronBackCircle } from "react-icons/io5";
+
+export const DropDownMenu=()=>{
+
+  return(
+    <div>
+      <DropMenu>
+        <DropDownItems/>    
+      </DropMenu>
+    </div>
+
+  )
+
+  
+
+  const [open,setOpen]=useState(false);
+  let menuRef = useState();
+  useEffect(()=> {
+    let handler =(e)=>{
+      if(!menuRef.current.contains(e.target)){
+      setOpen(false);
+      console.log(menuRef.current);
+    }
+  };
+    document.addEventListener("mousedown",handler);
+
+    return()=>{
+      document.removeEventListener("mousedown",handler);
+    }
+  });
+
+
+  function DropMenu(props){
+
+    const [open,setOpen]=useState(false);
+
+    return(
+      <div className="DropDownSection">
+        <h1 className="menudrop"onClick={()=>{setOpen(!open)}} >Menu <IoIosMenu />{props.menu}</h1>
+
+        {open && props.children}
+
+      </div>
+    )
+  };
+ 
+}
+function DropDownItems(){
+
+  const [activeMenu,setActiveMenu]=useState('main');
+  const [menuHeight,setMenuHeight]=useState(null);
+
+  function calcHeight(el){
+    const height =el.offsetHeight;
+    setMenuHeight(height);
+  }
+
+function DropDownItems1(props){
+  return(
+    <a className="menudropp" onClick={() =>props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <span className="iconleft">
+        {props.lefticon}
+        </span>
+      {props.children}
+    </a>
+  )
+}
+
+  return( 
+    <div className ="DropDown1"style={{height:menuHeight}}>
+      <CSSTransition in={activeMenu === 'main'}
+    unmountOnExit timeout={500}
+     className="primaryMenu"
+     onEnter={calcHeight}>
+      <div className="menu">
+        <DropDownItems1 lefticon={<FaCopy/>}>Copy Link</DropDownItems1>
+        <DropDownItems1 lefticon={<GrLanguage /> } goToMenu="language">Language</DropDownItems1>
+        <DropDownItems1 lefticon={<AiOutlineBgColors/>} goToMenu="custom">Customization</DropDownItems1>
+        <DropDownItems1 lefticon={<CgProfile/>}>Your Profile</DropDownItems1>
+        <DropDownItems1 lefticon={<TbLogout2 />}>Log out</DropDownItems1>
+
+      </div>
+      </CSSTransition>
+
+      <CSSTransition in={activeMenu === 'language' }
+    unmountOnExit timeout={500}
+     className="secondaryMenu">
+      <div className="menu">
+      <DropDownItems1 lefticon={<IoChevronBackCircle />} goToMenu="main" />
+        <DropDownItems1 >English</DropDownItems1>
+        <DropDownItems1 >Русский</DropDownItems1>
+        <DropDownItems1 >中国人</DropDownItems1>
+        <DropDownItems1 >Español</DropDownItems1>
+        <DropDownItems1 >한국인</DropDownItems1>
+
+      </div>
+      </CSSTransition>
+
+      <CSSTransition in={activeMenu === 'custom' }
+    unmountOnExit timeout={500}
+     className="secondaryMenu">
+      <div className="menu">
+      <DropDownItems1 lefticon={<IoChevronBackCircle />} goToMenu="main" />
+        <DropDownItems1 >Legend</DropDownItems1>
+        <DropDownItems1 >Myth</DropDownItems1>
+        <DropDownItems1 >Epic</DropDownItems1>
+        <DropDownItems1 >Rare</DropDownItems1>
+        <DropDownItems1 >Uncommon</DropDownItems1>
+        <DropDownItems1 >Common</DropDownItems1>
+      </div>
+      </CSSTransition>
+
+
+
+   </div>
+    
+  );
+}
 
 function Navbar({ sendDataToParent }) {
   const [modalActive, setModalActive] = useState(false);
@@ -75,13 +200,7 @@ function Navbar({ sendDataToParent }) {
             ) : (
               <span />
             )}
-            {
-              wallet ? (
-                <TonConnectButton />
-              ) : (
-                <TonConnectButton />
-              ) /* ВОТ ТУТ РАБОТАТЬ АЛИНА, ВОТ ЭТОТ БЛОК ТОНКОННЕКТ БУТТОН УБИРАЕШЬ И ДЕЛАЕШЬ ТУДА КАСТОМНУЮ КНОПКУ */
-            }
+          <DropDownMenu/>
           </ul>
         </div>
       </div>
