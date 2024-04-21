@@ -31,19 +31,19 @@ const history = [
       {
         id: 1,
         type: "hmstr",
-        image: ".images/icons/HMSTR",
+        image: "./images/jettons/HMSTR",
         ammount: 200,
       },
       {
         id: 2,
         type: "arbuz",
-        image: ".images/icons/arbuz",
+        image: "./images/jettons/arbuz",
         ammount: 300,
       },
       {
         id: 3,
         type: "glint",
-        image: ".images/icons/GLINT",
+        image: "./images/jettons/GLINT",
         ammount: 20,
       },
     ],
@@ -74,19 +74,19 @@ const history = [
       {
         id: 1,
         type: "hmstr",
-        image: ".images/icons/HMSTR",
+        image: "./images/jettons/HMSTR",
         ammount: 330,
       },
       {
         id: 2,
         type: "arbuz",
-        image: ".images/icons/arbuz",
+        image: "./images/jettons/arbuz",
         ammount: 3000,
       },
       {
         id: 3,
         type: "glint",
-        image: ".images/icons/GLINT",
+        image: "./images/jettons/GLINT",
         ammount: 50000,
       },
     ],
@@ -112,32 +112,13 @@ const history = [
         image:
           "https://i.getgems.io/pwW6Y9cX0cwfrOfv_X6YBRteBHXTffMt3Ej195rN9HE/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvNTgvaW1hZ2UucG5n",
       },
-      {
-        id: 3,
-        name: "LOLZ#62",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/YNV-0xHE466rpYBCuNKokNnj_sheORDXo_OU5wNQwac/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvMTAwMDA2MS9pbWFnZS5wbmc",
-      },
     ],
     jettons1: [
       {
         id: 1,
         type: "hmstr",
-        image: ".images/icons/HMSTR",
+        image: "./images/jettons/HMSTR",
         ammount: 200,
-      },
-      {
-        id: 2,
-        type: "arbuz",
-        image: ".images/icons/arbuz",
-        ammount: 300,
-      },
-      {
-        id: 3,
-        type: "glint",
-        image: ".images/icons/GLINT",
-        ammount: 20,
       },
     ],
     items2: [
@@ -148,38 +129,24 @@ const history = [
         image:
           "https://i.getgems.io/jkHNEKtrcimMHlWBkvCOPAg8JX3sLwbIKnkuZ8-jY5w/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvNzMvaW1hZ2UucG5n",
       },
-      {
-        id: 2,
-        name: "LOLZ#54",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/jkHNEKtrcimMHlWBkvCOPAg8JX3sLwbIKnkuZ8-jY5w/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvNzMvaW1hZ2UucG5n",
-      },
-      {
-        id: 3,
-        name: "LOLZ#54",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/jkHNEKtrcimMHlWBkvCOPAg8JX3sLwbIKnkuZ8-jY5w/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvNzMvaW1hZ2UucG5n",
-      },
     ],
     jettons2: [
       {
         id: 1,
         type: "hmstr",
-        image: ".images/icons/HMSTR",
+        image: "./images/jettons/HMSTR.jpg",
         ammount: 330,
       },
       {
         id: 2,
         type: "arbuz",
-        image: ".images/icons/arbuz",
+        image: "./images/jettons/arbuz",
         ammount: 3000,
       },
       {
         id: 3,
         type: "glint",
-        image: ".images/icons/GLINT",
+        image: "./images/jettons/GLINT",
         ammount: 50000,
       },
     ],

@@ -1,0 +1,71 @@
+.history_item {
+  align-items: center;
+  background-color: #16181c;
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+.history_item:hover {
+  background-color: #27292e;
+}
+.top_content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.top_content_left {
+  display: flex;
+}
+.top_content_left img {
+  margin-right: 15px;
+}
+.top_content_left h1 {
+  font-size: 15px;
+  color: #6c6e73;
+  font-weight: 600;
+}
+.top_content_left h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.top_content_right {
+  margin-top: 8px;
+}
+.complete_status {
+  color: #29b260;
+}
+.awaiting_status {
+  color: rgb(138, 138, 138);
+}
+.nft_history {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.details_content {
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
+  margin-bottom: 0px;
+}
+.nft_history_1,
+.nft_history_2 {
+  display: flex;
+  column-gap: 6px;
+}
+.jettons_history_1,
+.jettons_history_2 {
+  display: block;
+}
+.jetton_history_list {
+  column-gap: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(226, 217, 217);
+}
+.arrow {
+  margin: 0 10px;
+}

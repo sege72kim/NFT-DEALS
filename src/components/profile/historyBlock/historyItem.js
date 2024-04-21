@@ -4,7 +4,7 @@ import TruncateText from "../../../utils/truncateText";
 
 function HistoryItem({ data }) {
   return (
-    <div className="nftnameblock_a">
+    <div className="history_item">
       <div className="top_content">
         <div className="top_content_left">
           <img src="./images/swap.svg" alt="" />
@@ -25,7 +25,39 @@ function HistoryItem({ data }) {
           </div>
         </div>
       </div>
-      <div className="details_content"></div>
+      <div className="details_content">
+        <div className="nft_history_1">
+          {data.items1.map((item) => (
+            <div key={item.id}>
+              <img className="nft_history" src={item.image} alt="" />
+            </div>
+          ))}
+        </div>
+        <img className="arrow" src="./images/plus2.svg" alt="" />
+        <div className="jettons_history_1">
+          {data.jettons1.map((item) => (
+            <div key={item.id} className="jetton_history_list">
+              {item.ammount} {item.type}
+            </div>
+          ))}
+        </div>
+        <img className="arrow" src="./images/arrow.svg" alt="" />
+        <div className="nft_history_2">
+          {data.items2.map((item) => (
+            <div key={item.id}>
+              <img className="nft_history" src={item.image} alt="" />
+            </div>
+          ))}
+        </div>
+        <img className="arrow" src="./images/plus2.svg" alt="" />
+        <div className="jettons_history_2">
+          {data.jettons2.map((item) => (
+            <div key={item.id} className="jetton_history_list">
+              <img src={item.image} alt="2" /> {item.ammount}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
