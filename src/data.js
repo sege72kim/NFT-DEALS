@@ -4,6 +4,129 @@ const data = [
     hamsters: 5,
     ton: 990,
     gram: 322,
+    jettons: [
+      {
+        id: 1,
+        ammount: 3225380910.333,
+        type: "HMSTR",
+        image: "./images/jettons/HMSTR.jpg",
+      },
+      {
+        id: 2,
+        ammount: 23,
+        type: "USDT",
+        image: "./images/jettons/usdt.png",
+      },
+      {
+        id: 3,
+        ammount: 344333333,
+        type: "TON",
+        image: "./images/jettons/TON.jpg",
+      },
+      {
+        id: 4,
+        ammount: 23,
+        type: "GRAM",
+        image: "./images/jettons/GRAM.jpg",
+      },
+      {
+        id: 5,
+        ammount: 23,
+        type: "STON",
+        image: "./images/jettons/stonfi.svg",
+      },
+      {
+        id: 6,
+        ammount: 23,
+        type: "PUNK",
+        image: "./images/jettons/punk.png",
+      },
+      {
+        id: 7,
+        ammount: 23,
+        type: "FNZ",
+        image: "./images/jettons/fnz.svg",
+      },
+      {
+        id: 8,
+        ammount: 23,
+        type: "AIYA",
+        image: "./images/jettons/apc.webp",
+      },
+      {
+        id: 9,
+        ammount: 23,
+        type: "SCALE",
+        image: "./images/jettons/scale.png",
+      },
+      {
+        id: 10,
+        ammount: 23,
+        type: "JUSDT",
+        image: "./images/jettons/usdt.png",
+      },
+      {
+        id: 11,
+        ammount: 23,
+        type: "VIRUS",
+        image: "./images/jettons/virus.webp",
+      },
+      {
+        id: 12,
+        ammount: 23,
+        type: "MRDN",
+        image: "./images/jettons/MRDN.png",
+      },
+      {
+        id: 13,
+        ammount: 23,
+        type: "TONNEL",
+        image: "./images/jettons/tonnel.png",
+      },
+      {
+        id: 14,
+        ammount: 23,
+        type: "RAFF",
+        image: "./images/jettons/raff.svg",
+      },
+      {
+        id: 15,
+        ammount: 23,
+        type: "GLINT",
+        image: "./images/jettons/GLINT.png",
+      },
+      {
+        id: 16,
+        ammount: 23,
+        type: "DFC",
+        image: "./images/jettons/dfc.png",
+      },
+      {
+        id: 17,
+        ammount: 23,
+        type: "ARBUZ",
+        image: "./images/jettons/arbuz.png",
+      },
+      {
+        id: 18,
+        ammount: 23,
+        type: "KINGY",
+        image: "./images/jettons/kingy.png",
+      },
+      {
+        id: 19,
+        ammount: 23,
+        type: "JETTON",
+        image: "./images/jettons/jetton.png",
+      },
+      {
+        id: 20,
+        ammount: 23,
+        type: "FISH",
+        image: "./images/jettons/fish.png",
+      },
+    ],
+
     items: [
       {
         id: 1,
@@ -83,34 +206,34 @@ const data = [
     ton: 223,
     gram: 3220,
     items: [
-      {
-        id: 1,
-        name: "LOLZ#87",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/BRbyYv5Ah1Ozp-t4-Tt6bCvqupTEIe6JqdtWJDGTeKU/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODYvaW1hZ2UucG5n",
-      },
-      {
-        id: 2,
-        name: "LOLZ#81",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/B0f31J3iylwb6geqlTVYYoJ0_bKq1-uBC5Dyo97QeAA/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODAvaW1hZ2UucG5n",
-      },
-      {
-        id: 3,
-        name: "LOLZ#96",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/maatX5U8hIE6VgAdSC_VqXlTNY55N06J_4m6syKzFQQ/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTUvaW1hZ2UucG5n",
-      },
-      {
-        id: 4,
-        name: "LOLZ#97",
-        type: "lolz hamsters & gods",
-        image:
-          "https://i.getgems.io/RGSN5z_ApqRNzEy4-R42WLUx_0_HNcT98Z1V4d2s4cI/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTYvaW1hZ2UucG5n",
-      },
+      // {
+      //   id: 1,
+      //   name: "LOLZ#87",
+      //   type: "lolz hamsters & gods",
+      //   image:
+      //     "https://i.getgems.io/BRbyYv5Ah1Ozp-t4-Tt6bCvqupTEIe6JqdtWJDGTeKU/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODYvaW1hZ2UucG5n",
+      // },
+      // {
+      //   id: 2,
+      //   name: "LOLZ#81",
+      //   type: "lolz hamsters & gods",
+      //   image:
+      //     "https://i.getgems.io/B0f31J3iylwb6geqlTVYYoJ0_bKq1-uBC5Dyo97QeAA/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvODAvaW1hZ2UucG5n",
+      // },
+      // {
+      //   id: 3,
+      //   name: "LOLZ#96",
+      //   type: "lolz hamsters & gods",
+      //   image:
+      //     "https://i.getgems.io/maatX5U8hIE6VgAdSC_VqXlTNY55N06J_4m6syKzFQQ/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTUvaW1hZ2UucG5n",
+      // },
+      // {
+      //   id: 4,
+      //   name: "LOLZ#97",
+      //   type: "lolz hamsters & gods",
+      //   image:
+      //     "https://i.getgems.io/RGSN5z_ApqRNzEy4-R42WLUx_0_HNcT98Z1V4d2s4cI/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYy82NWU5OWUxZWQ4MGIwM2M0MmNmMGJhYWUvOTYvaW1hZ2UucG5n",
+      // },
     ],
   },
 ];

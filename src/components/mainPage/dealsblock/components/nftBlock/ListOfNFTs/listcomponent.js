@@ -173,7 +173,7 @@ function ListComponent({ data, onClickBlocks }) {
                   disabled={
                     selectedBlocks.length >= 4 && !selectedBlocks.includes(item)
                   }
-                  isFullSelection={isFullSelection} // Передаем состояние выбора четырех элементов
+                  isFullSelection={isFullSelection}
                 />
               </div>
             ))}

@@ -2,20 +2,21 @@ import TruncateText from "../../../utils/truncateText";
 import "./style.css";
 import { useTonAddress } from "@tonconnect/ui-react";
 import React, { useState } from "react";
+import { useTonWallet } from "@tonconnect/ui-react";
+import data from "../../../data";
 
 const copyToClipboard = (text) => {
   navigator.clipboard.writeText(text);
 };
 
 const InfoUserBlock = () => {
+  const userData = data.find((user) => user.username === "UserName 228");
+  const wallet = useTonWallet();
   const userFriendlyAddress = useTonAddress();
 
   const handleClick = () => {
-    const textToCopy = "Ваш текст для копирования";
-    copyToClipboard(textToCopy);
+    copyToClipboard(userFriendlyAddress);
     setIcon("done");
-
-    // через 3 секунды возвращаем старую иконку
     setTimeout(() => {
       setIcon("copy");
     }, 3000);
@@ -33,21 +34,28 @@ const InfoUserBlock = () => {
         <div className="info_blocks1">
           <div className="info_block">
             <div className="info_blocks_text1">NFTs</div>
-            <div className="info_blocks_text2">23</div>
+            <div className="info_blocks_text2">{userData.items.length}</div>
           </div>
           <div className="info_block">
             <div className="info_blocks_text1">Made deals</div>
-            <div className="info_blocks_text2">3</div>
+            <div className="info_blocks_text2">
+              {userData.jettons[1].ammount}
+            </div>
           </div>
         </div>
         <div className="info_blocks2">
           <div className="info_block">
             <div className="info_blocks_text1">HMSTR balance</div>
-            <div className="info_blocks_text2">33</div>
+            <div className="info_blocks_text2">
+              {userData.jettons[0].ammount}
+            </div>
           </div>
           <div className="info_block">
             <div className="info_blocks_text1">Wallet balance</div>
-            <div className="info_blocks_text2">230</div>
+            <div className="info_blocks_text2">
+              {userData.jettons[2].ammount}{" "}
+              <div style={{ marginLeft: "5px" }}>TON</div>
+            </div>
           </div>
         </div>
       </div>
