@@ -2,11 +2,13 @@ import React from "react";
 
 function ListItem({ data }) {
   return (
-    <div className="nftnameblock_p">
-      <img className="avatar" src={data.image} alt={data.name} />
-      <div className="nfttextblock_p">
-        <div className="nfttype_p">{data.type}</div>
-        <div className="nftname_p">{data.name}</div>
+    <div class="nft_card">
+      <div className="avatar_nft">
+        <img src={data.image} alt={data.name} />
+      </div>
+      <div className="card_text">
+        <div className="card_type">{data.type}</div>
+        <div className="card_name">{data.name}</div>
       </div>
     </div>
   );

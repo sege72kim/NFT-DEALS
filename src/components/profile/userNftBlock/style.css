@@ -25,51 +25,18 @@
 .nftsearchi_p:active[type="text"] {
   border-color: #059df5;
 }
-
-.nftnameblock_p {
-  align-items: center;
-  display: flex;
-  background-color: #0e1014;
-  padding: 20px 40px;
-  border-radius: 40px;
-  margin: 10px 20px;
-  border: 1px solid #393b41;
-  transition: background-color 0.3s ease;
-}
-.nftnameblock_p:hover {
-  background-color: #27292e;
-}
-
-.nfttype_p {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 13px;
-  color: #838386;
-}
-.nftname_p {
-  margin-top: 5px;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 500;
-  color: #dddde6;
-}
 /*List component*/
 
 .scrollbar1_p {
   overflow: hidden; /* Скрыть стандартный скроллбар */
   position: relative;
-  width: 100%; /* Ширина блока с прокруткой */
-  height: 600px;
+  width: 98%;
+  height: 700px;
   margin: 12px 0px;
   margin-bottom: 20px;
 }
-.scrollbar2_p {
-  overflow-y: auto; /* Включить вертикальную прокрутку */
-  width: 100%;
-  height: 100%;
-}
 .scrollbar2_p::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .scrollbar2_p::-webkit-scrollbar-thumb {
@@ -81,8 +48,17 @@
 }
 .scrollbar2_p {
   scrollbar-width: 2px;
+  overflow-y: auto; /* Включить вертикальную прокрутку */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
+.scrollbar2_p > div {
+  flex: 0 0 calc(33.33% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
+  padding: 10px; /* Добавляем отступы между элементами */
+}
 /*Not Found Text*/
 .ntfndnft_p {
   position: relative;
@@ -110,7 +86,59 @@
   font-size: 17px;
   font-weight: 500;
 }
-
+/*   */
+.nft_card {
+  align-items: center;
+  background-color: #0e1014;
+  border-radius: 20px;
+  height: 350px;
+  border: 1px solid #393b41;
+  transition: background-color 0.3s ease;
+}
+.avatar_nft {
+  border-radius: 20px;
+  min-height: 271px;
+  overflow: hidden;
+}
+.avatar_nft img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: brightness(0.95);
+}
+.card_text {
+  margin: 15px;
+}
+.card_type {
+  text-transform: uppercase;
+  color: #838386;
+  font-weight: 500;
+  font-size: 14px;
+}
+.card_name {
+  margin-top: 5px;
+  font-weight: 700;
+  color: #dddde6;
+  font-size: 18px;
+}
+@media (max-width: 1300px) {
+  .nft_card {
+    height: 330px;
+  }
+  .avatar_nft {
+    min-height: 181px;
+  }
+}
+@media (max-width: 1050px) {
+  .scrollbar2_p > div {
+    flex: 0 0 calc(50% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
+    padding: 10px; /* Добавляем отступы между элементами */
+  }
+  .nft_card {
+    height: 370px;
+  }
+}
 @media (max-width: 600px) {
   .ntfndnft {
     height: 100%;

@@ -68,8 +68,8 @@ function JettonList({ data }) {
             placeholder="Seacrh Jetton"
           />
         </div>
-        <div className="scrollbar1_p">
-          <div className="scrollbar2_p">
+        <div className="scrollbar1_j">
+          <div className="scrollbar2_j">
             {filteredData.map(
               (item) =>
                 item.ammount !== 0 && (
@@ -124,8 +124,8 @@ function JettonList({ data }) {
             placeholder="Search NFT"
           />
         </div>
-        <div className="scrollbar1_p">
-          <div className="scrollbar2_p">
+        <div className="scrollbar1_j">
+          <div className="scrollbar2_j">
             {data.map(
               (item) =>
                 item.ammount !== 0 && (

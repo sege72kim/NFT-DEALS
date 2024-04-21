@@ -1,6 +1,7 @@
+import ActionsList from "./listitem";
 import "./style.css";
-
-const NotificationBlock = () => {
-  return <div>Notification</div>;
+import activity from "../../../activity";
+const NofificationBlock = () => {
+  return <ActionsList data={activity} />;
 };
-export default NotificationBlock;
+export default NofificationBlock;
