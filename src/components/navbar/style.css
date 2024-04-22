@@ -131,6 +131,100 @@
   transition: opacity 0.2s ease-in;
 }
 
+/* менюшка */
+
+.DropMenu {
+  display: flex;
+  justify-content: center;
+}
+.DropDownSection {
+  background-color: #393939;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 1300px;
+}
+.DropDownSection::before {
+  position: absolute;
+}
+.menudropp {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 10px auto;
+}
+.menudropp:hover {
+  background-color: rgb(91, 91, 91);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.iconleft {
+  margin: 7px 10px 5px;
+  font-size: 20px;
+}
+.DropDown1 {
+  position: absolute;
+  background-color: #393939;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 200px;
+  line-height: 1.2rem;
+  width: 200px;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+  transform: translateX(-45%);
+}
+.DropDown1.active {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+
+.DropDown1.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.menudrop {
+  display: flex;
+  align-items: center;
+  margin: 3px 10px;
+}
+
+.menu {
+  width: 100%;
+}
+.primaryMenu-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.primaryMenu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.primaryMenu-exit {
+  position: absolute;
+}
+.primaryMenu-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+.secondaryMenu-enter {
+  transform: translateX(110%);
+}
+.secondaryMenu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.secondaryMenu-exit {
+  color: #0b87d0;
+}
+.secondaryMenu-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
 @media (max-width: 600px) {
   .push {
     height: 23px;
