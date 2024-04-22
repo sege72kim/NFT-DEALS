@@ -95,4 +95,5 @@ export const messages = {
     senddeal: "Enviar acuerdo",
     balance: "Saldo: ",
   },
+  [LOCALES.KOREAN]: {},
 };

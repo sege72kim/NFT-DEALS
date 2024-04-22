@@ -53,7 +53,7 @@ function HistoryItem({ data }) {
         <div className="jettons_history_2">
           {data.jettons2.map((item) => (
             <div key={item.id} className="jetton_history_list">
-              <img src={item.image} alt="2" /> {item.ammount}
+              {item.ammount} {item.type}
             </div>
           ))}
         </div>

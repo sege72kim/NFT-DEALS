@@ -3,4 +3,5 @@ export const LOCALES = {
   RUSSIAN: "ru-RU",
   CHINES: "chs",
   SPANISH: "es",
+  KOREAN: "kr",
 };

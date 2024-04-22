@@ -67,3 +67,19 @@
   display: flex;
   justify-content: center;
 }
+.create_trade_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 50px;
+  background-color: #059df5;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.create_trade_button:hover {
+  background-color: #0387d3;
+  transform: scale(0.98);
+}

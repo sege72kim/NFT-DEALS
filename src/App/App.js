@@ -24,14 +24,17 @@ function App() {
     locale = LOCALES.CHINES;
   } else if (dataFromChild === "es") {
     locale = LOCALES.SPANISH;
-  } else if (dataFromChild === "ar") {
-    locale = LOCALES.ARAB;
+  } else if (dataFromChild === "kr") {
+    locale = LOCALES.KOREAN;
   }
 
   return (
     <TonConnectUIProvider manifestUrl="http://localhost:3000/tonconnect-manifest.json">
       <IntlProvider messages={messages[locale]} locale="en" defaultLocale="en">
-        <Navbar sendDataToParent={handleDataFromChild} />
+        <Navbar
+          sendDataToParent={handleDataFromChild}
+          sendDataToApp={handleDataFromChild}
+        />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/history" element={<Profile />} />

@@ -1,13 +1,15 @@
 import "./style.css";
-function Notifications({ active, setActive, children }) {
+function MenuModal({ active, setActive, children }) {
   return (
     <div
       className={active ? "modalnot active" : "modalnot"}
       onClick={() => setActive(false)}
     >
-      <div className="modalcontainernot">
+      <div className="modalcontainer_menu">
         <div
-          className={active ? "modalnot_content active" : "modalnot_content"}
+          className={
+            active ? "modal_content_menu active" : "modal_content_menu"
+          }
           onClick={(e) => e.stopPropagation()}
         >
           {children}
@@ -17,4 +19,4 @@ function Notifications({ active, setActive, children }) {
   );
 }
 
-export default Notifications;
+export default MenuModal;

@@ -28,34 +28,6 @@
   max-width: 100%; /* Ограничиваем максимальную ширину до 100% */
   transition: 0.2s;
   border: 1px solid #2d2f35;
-  transform: scale(0); /* Сдвигаем обратно на половину ширины элемента */
-}
-.modalnot_content.active {
-  transform: scale(1);
-}
-
-/*LNG CSS*/
-
-.modalcontainerlg {
-  max-width: 1300px;
-  margin: 0 auto;
-  position: relative;
-}
-.modallg_content {
-  position: absolute;
-  top: 70px;
-  right: 10px;
-  margin-right: 200px;
-  border-radius: 15px;
-  background-color: #1e2024;
-  width: 100px;
-  max-width: 100%;
-  transition: 0.2s;
-  border: 1px solid #2d2f35;
-  transform: scale(0);
-}
-.modallg_content.active {
-  transform: scale(1);
 }
 
 @media (max-width: 767px) {

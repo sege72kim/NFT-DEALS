@@ -1,31 +1,19 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import Notifications from "./notifications/notifications";
-import LNG from "./notifications/lng";
 import { FormattedMessage } from "react-intl";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { Link } from "react-router-dom";
 import { useTonWallet } from "@tonconnect/ui-react";
+import { useTonAddress } from "@tonconnect/ui-react";
+import TruncateText from "../../utils/truncateText";
+import MenuModal from "./menu/menu_modal";
+import MenuProfile from "./menu/menu";
 
-function Navbar({ sendDataToParent }) {
+function Navbar({ sendDataToParent, sendDataToApp }) {
+  const userFriendlyAddress = useTonAddress();
   const [modalActive, setModalActive] = useState(false);
   const [modalActive2, setModalActive2] = useState(false);
-  const sendData = () => {
-    const data = "en";
-    sendDataToParent(data);
-  };
-  const sendData2 = () => {
-    const data = "ru";
-    sendDataToParent(data);
-  };
-  const sendData3 = () => {
-    const data = "chs";
-    sendDataToParent(data);
-  };
-  const sendData4 = () => {
-    const data = "es";
-    sendDataToParent(data);
-  };
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -55,18 +43,11 @@ function Navbar({ sendDataToParent }) {
             </Link>
           </div>
           <ul className="nav-list">
-            <div class="pushbutton" onClick={() => setModalActive2(true)}>
-              <img
-                src="./images/lng.png"
-                className="push"
-                alt="Noftifications"
-              ></img>
-            </div>
             {wallet ? (
               <div>
-                <div class="pushbutton" onClick={() => setModalActive(true)}>
+                <div class="pushbutton" onClick={() => setModalActive2(true)}>
                   <img
-                    src="./images/push.png"
+                    src="./images/bell.svg"
                     className="push"
                     alt="Noftifications"
                   ></img>
@@ -75,18 +56,25 @@ function Navbar({ sendDataToParent }) {
             ) : (
               <span />
             )}
-            {
-              wallet ? (
-                <TonConnectButton />
-              ) : (
-                <TonConnectButton />
-              ) /* ВОТ ТУТ РАБОТАТЬ АЛИНА, ВОТ ЭТОТ БЛОК ТОНКОННЕКТ БУТТОН УБИРАЕШЬ И ДЕЛАЕШЬ ТУДА КАСТОМНУЮ КНОПКУ */
-            }
+            {wallet ? (
+              <div className="menu_button" onClick={() => setModalActive(true)}>
+                <TruncateText text={userFriendlyAddress} maxLength={8} />
+                <img src="./images/menu-burger.svg" alt="" />
+              </div>
+            ) : (
+              <TonConnectButton />
+            )}
           </ul>
         </div>
       </div>
-
-      <Notifications active={modalActive} setActive={setModalActive}>
+      <MenuModal active={modalActive} setActive={setModalActive}>
+        <MenuProfile
+          sendDataToParent={sendDataToParent}
+          sendDataToApp={sendDataToApp}
+          handleClick2={() => setModalActive(false)}
+        />
+      </MenuModal>
+      <Notifications active={modalActive2} setActive={setModalActive2}>
         <div className="nottxt">
           <FormattedMessage id="notifications" />
         </div>
@@ -127,20 +115,6 @@ function Navbar({ sendDataToParent }) {
           </div>
         </div>
       </Notifications>
-      <LNG active={modalActive2} setActive={setModalActive2}>
-        <div className="lngcomp" onClick={sendData}>
-          English
-        </div>
-        <div className="lngcomp2" onClick={sendData2}>
-          Русский
-        </div>
-        <div className="lngcomp2" onClick={sendData3}>
-          中国人
-        </div>
-        <div className="lngcomp2" onClick={sendData4}>
-          Español
-        </div>
-      </LNG>
     </nav>
   );
 }
