@@ -4,6 +4,7 @@ import { useTonAddress } from "@tonconnect/ui-react";
 import React, { useState } from "react";
 import { useTonWallet } from "@tonconnect/ui-react";
 import data from "../../../data";
+import { Link } from "react-router-dom";
 
 const copyToClipboard = (text) => {
   navigator.clipboard.writeText(text);
@@ -61,7 +62,9 @@ const InfoUserBlock = () => {
           </div>
         </div>
       </div>
-      <div className="create_trade_button">Create Trade</div>
+      <Link to="/">
+        <div className="create_trade_button">Create Trade</div>
+      </Link>
     </div>
   );
 };
