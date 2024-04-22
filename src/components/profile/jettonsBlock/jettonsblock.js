@@ -1,6 +1,6 @@
-import JettonList from "./jettonlist";
 import "./style.css";
 import data from "../../../data";
+import JettonList from "./Jettonlist";
 const JettonsBlock = () => {
   const userData = data.find((user) => user.username === "UserName 228");
   return <JettonList data={userData.jettons} />;
