@@ -2,7 +2,6 @@ import TruncateText from "../../../utils/truncateText";
 import "./style.css";
 import { useTonAddress } from "@tonconnect/ui-react";
 import React, { useState } from "react";
-import { useTonWallet } from "@tonconnect/ui-react";
 import data from "../../../data";
 import { Link } from "react-router-dom";
 
@@ -12,7 +11,6 @@ const copyToClipboard = (text) => {
 
 const InfoUserBlock = () => {
   const userData = data.find((user) => user.username === "UserName 228");
-  const wallet = useTonWallet();
   const userFriendlyAddress = useTonAddress();
 
   const handleClick = () => {

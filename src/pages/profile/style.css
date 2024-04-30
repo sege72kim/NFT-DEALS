@@ -42,3 +42,35 @@
 .profile_choosed_block {
   margin-top: 20px;
 }
+@media (max-width: 1000px){
+  .profile_container{
+    display: block;
+  }
+  .profile_main{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .profile_options{
+    margin-top: 40px;
+    column-gap: 25px;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .profile_option,
+  .profile_option_selected {
+    font-size: 17px;
+  }
+  .profile_choosed_block {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 500px){
+  .profile_option,
+  .profile_option_selected {
+    font-size: 14px;
+  }
+  .profile_options{
+    column-gap: 15px;
+
+  }
+}

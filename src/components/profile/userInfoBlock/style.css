@@ -1,8 +1,9 @@
 .user_info_block {
   background-color: #16181c;
-  width: 400px;
+  width: 390px;
   max-height: 380px;
   border-radius: 20px;
+  margin-left: 10px;
   border: 1px solid #343940;
 }
 .user_info_container {
@@ -86,4 +87,19 @@
 .create_trade_button:hover {
   background-color: #0387d3;
   transform: scale(0.98);
+}
+@media (max-width: 1000px){
+  .user_info_block{
+    width: 95%;
+    margin:0 auto;
+  }
+  .create_trade_button{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .info_block{
+    margin: 5px 5px;
+  padding: 20px 0px;
+  }
 }

@@ -91,7 +91,7 @@
   align-items: center;
   background-color: #0e1014;
   border-radius: 20px;
-  height: 350px;
+  min-height: 320px;
   border: 1px solid #393b41;
   transition: background-color 0.3s ease;
 }
@@ -100,8 +100,9 @@
 }
 .avatar_nft {
   border-radius: 20px;
-  min-height: 271px;
+  min-height: 181px;
   overflow: hidden;
+
 }
 .avatar_nft img {
   width: 100%;
@@ -111,7 +112,8 @@
   filter: brightness(0.95);
 }
 .card_text {
-  margin: 15px;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 .card_type {
   text-transform: uppercase;
@@ -124,29 +126,53 @@
   font-weight: 700;
   color: #dddde6;
   font-size: 18px;
+  padding-bottom: 10px;
 }
-@media (max-width: 1300px) {
-  .nft_card {
-    height: 330px;
-  }
-  .avatar_nft {
-    min-height: 181px;
-  }
-}
-@media (max-width: 1050px) {
+
+@media (max-width: 1200px) {
   .scrollbar2_p > div {
     flex: 0 0 calc(50% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
     padding: 10px; /* Добавляем отступы между элементами */
   }
-  .nft_card {
-    height: 370px;
-  }
+
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .ntfndnft {
     height: 100%;
   }
-  .scrollbar1 {
-    height: 400px;
+  .scrollbar2_p > div {
+    flex: 0 0 calc(33.33% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
+    padding: 10px; /* Добавляем отступы между элементами */
+  }
+}
+
+@media(max-width: 800px){
+  .scrollbar2_p > div {
+    flex: 0 0 calc(50% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
+    padding: 10px; /* Добавляем отступы между элементами */
+  }
+
+}
+@media(max-width: 600px){
+  .scrollbar2_p > div {
+    flex: 0 0 calc(50% - 10px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
+    padding: 10px; /* Добавляем отступы между элементами */
+  }
+
+  .card_type {
+    font-size: 12px;
+  }
+  .card_name {
+    font-size: 14px;
+  }
+  .nft_card{
+    padding-top: -10px;
+    min-height: 150px;;
+  }
+}
+@media(max-width: 400px){
+  .scrollbar2_p > div {
+    flex: 0 0 calc(100% - 10px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
+    padding: 10px; /* Добавляем отступы между элементами */
   }
 }

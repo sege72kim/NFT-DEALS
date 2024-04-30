@@ -4,7 +4,7 @@ import JettonsBlock from "../../components/profile/jettonsBlock/jettonsblock";
 import NotificationBlock from "../../components/profile/notificationsBlock/nofificationBlock";
 
 import UserNftBlock from "../../components/profile/userNftBlock/userNftBlock";
-import InfoUserBlock from "../../components/profile/userinfoblock/infoblock";
+import InfoUserBlock from "../../components/profile/userInfoBlock/infoblock";
 import "./style.css";
 import React, { useState } from "react";
 const Profile = () => {
