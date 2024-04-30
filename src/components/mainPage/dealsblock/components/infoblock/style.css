@@ -7,6 +7,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
   width: 30%;
+  /* border: 1px solid #afaf6a; */
 }
 .avatar {
   width: 50px;

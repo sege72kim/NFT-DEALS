@@ -20,7 +20,6 @@
   margin: 0 auto;
 }
 /*usersearch*/
-
 .nftsearchi_p[type="text"] {
   margin-bottom: 3px;
   padding: 12px 20px;
@@ -133,5 +132,8 @@
   }
   .scrollbar1 {
     height: 400px;
+  }
+  .nftsearch_p {
+    margin-bottom: 30px;
   }
 }

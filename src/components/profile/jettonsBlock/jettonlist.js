@@ -24,7 +24,7 @@ function JettonList({ data }) {
     return (
       <div className="nft_profile_search">
         <div className="nftsearch_p">
-          <img src="./images/search.svg" alt="" />
+          <img className="search_svg" src="./images/search.svg" alt="" />
           <input
             type="text"
             value={searchQuery}
@@ -57,7 +57,7 @@ function JettonList({ data }) {
     return (
       <div className="nft_profile_search">
         <div className="nftsearch_p">
-          <img src="./images/search.svg" alt="" />
+          <img className="search_svg" src="./images/search.svg" alt="" />
           <input
             type="text"
             value={searchQuery}
@@ -87,7 +87,7 @@ function JettonList({ data }) {
     return (
       <div className="nft_profile_search">
         <div className="nftsearch_p">
-          <img src="./images/search.svg" alt="" />
+          <img className="search_svg" src="./images/search.svg" alt="" />
           <input
             type="text"
             value={searchQuery}
@@ -113,7 +113,7 @@ function JettonList({ data }) {
     return (
       <div className="nft_profile_search">
         <div className="nftsearch_p">
-          <img src="./images/search.svg" alt="" />
+          <img className="search_svg" src="./images/search.svg" alt="" />
           <input
             type="text"
             value={searchQuery}

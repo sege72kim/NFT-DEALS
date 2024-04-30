@@ -78,6 +78,19 @@
   height: 20px;
   border-radius: 50%;
 }
-.arrow {
+.arrow,
+.plussvg {
   margin: 0 10px;
+}
+.details_block {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .arrow {
+    opacity: 0;
+  }
+  .details_content {
+    display: block;
+  }
 }

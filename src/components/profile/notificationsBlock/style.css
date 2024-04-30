@@ -47,7 +47,7 @@
 .scrollbar1_a {
   overflow: hidden; /* Скрыть стандартный скроллбар */
   position: relative;
-  width: 98%;
+  width: 97%;
   height: 765px;
   margin: 12px 0px;
   margin-right: 5px;

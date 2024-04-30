@@ -30,7 +30,7 @@
 .scrollbar1_p {
   overflow: hidden; /* Скрыть стандартный скроллбар */
   position: relative;
-  width: 98%;
+  width: 97%;
   height: 700px;
   margin: 12px 0px;
   margin-bottom: 20px;
@@ -102,7 +102,6 @@
   border-radius: 20px;
   min-height: 181px;
   overflow: hidden;
-
 }
 .avatar_nft img {
   width: 100%;
@@ -134,7 +133,6 @@
     flex: 0 0 calc(50% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
     padding: 10px; /* Добавляем отступы между элементами */
   }
-
 }
 @media (max-width: 1000px) {
   .ntfndnft {
@@ -146,14 +144,13 @@
   }
 }
 
-@media(max-width: 800px){
+@media (max-width: 800px) {
   .scrollbar2_p > div {
     flex: 0 0 calc(50% - 20px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
     padding: 10px; /* Добавляем отступы между элементами */
   }
-
 }
-@media(max-width: 600px){
+@media (max-width: 600px) {
   .scrollbar2_p > div {
     flex: 0 0 calc(50% - 10px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
     padding: 10px; /* Добавляем отступы между элементами */
@@ -165,12 +162,15 @@
   .card_name {
     font-size: 14px;
   }
-  .nft_card{
+  .nft_card {
     padding-top: -10px;
-    min-height: 150px;;
+    min-height: 150px;
+  }
+  .nftsearch_p {
+    margin-bottom: 30px;
   }
 }
-@media(max-width: 400px){
+@media (max-width: 400px) {
   .scrollbar2_p > div {
     flex: 0 0 calc(100% - 10px); /* Устанавливаем ширину каждого элемента списка, учитывая отступы */
     padding: 10px; /* Добавляем отступы между элементами */

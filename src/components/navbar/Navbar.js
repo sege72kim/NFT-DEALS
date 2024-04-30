@@ -31,7 +31,7 @@ function Navbar({ sendDataToParent, sendDataToApp }) {
     <nav className="nav">
       <div className="container">
         <div className="nav-row">
-          <div>
+          <div className="logo_block">
             <img
               href="./index.html"
               src="./images/logo.png"
@@ -54,11 +54,21 @@ function Navbar({ sendDataToParent, sendDataToApp }) {
                 </div>
               </div>
             ) : (
-              <span />
+              <div>
+                <div class="pushbutton" onClick={() => setModalActive2(true)}>
+                  <img
+                    src="./images/globe.svg"
+                    className="push"
+                    alt="Noftifications"
+                  ></img>
+                </div>
+              </div>
             )}
             {wallet ? (
               <div className="menu_button" onClick={() => setModalActive(true)}>
-                <TruncateText text={userFriendlyAddress} maxLength={8} />
+                <div className="menu_link">
+                  <TruncateText text={userFriendlyAddress} maxLength={8} />
+                </div>
                 <img src="./images/menu-burger.svg" alt="" />
               </div>
             ) : (

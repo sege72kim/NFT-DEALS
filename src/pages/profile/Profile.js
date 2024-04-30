@@ -8,7 +8,7 @@ import InfoUserBlock from "../../components/profile/userInfoBlock/infoblock";
 import "./style.css";
 import React, { useState } from "react";
 const Profile = () => {
-  const [Option, setOption] = useState("hmstr");
+  const [Option, setOption] = useState("nfts");
 
   const handleOptionChange = (newOption) => {
     setOption(newOption);
