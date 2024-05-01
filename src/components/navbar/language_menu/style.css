@@ -1,0 +1,60 @@
+.modalnot {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+  .modalnot.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+  .modalcontainer_lang {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .modal_content_lang {
+    position: absolute;
+    top: 70px; /* Оставляем фиксированный отступ сверху */
+    right: 120px; /* Снимаем фиксированное позиционирование слева */
+    border-radius: 15px;
+    background-color: #1e2024;
+    width: 190px;
+    max-width: 100%; /* Ограничиваем максимальную ширину до 100% */
+    transition: 0.2s;
+    border: 1px solid #2d2f35;
+    overflow: hidden;
+  }
+  
+  .link_container {
+    text-decoration: none;
+    color: inherit;
+  }
+  .menu_item {
+    display: flex;
+    padding: 12px 20px;
+    column-gap: 15px;
+    align-items: center;
+    border: 1px solid #2d2f35;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .menu_item:hover {
+    background-color: #2d2f35;
+  }
+  .menu_item img {
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width: 1300px) {
+    .modal_content_menu {
+      right: 10px;
+    }
+  }
+  

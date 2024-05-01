@@ -9,11 +9,14 @@ import { useTonAddress } from "@tonconnect/ui-react";
 import TruncateText from "../../utils/truncateText";
 import MenuModal from "./menu/menu_modal";
 import MenuProfile from "./menu/menu";
+import LanguageMenu from "./language_menu/language_menu";
+import LanguageModal from "./language_menu/language_modal";
 
 function Navbar({ sendDataToParent, sendDataToApp }) {
   const userFriendlyAddress = useTonAddress();
   const [modalActive, setModalActive] = useState(false);
   const [modalActive2, setModalActive2] = useState(false);
+  const [modalActive3, setModalActive3] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -55,7 +58,7 @@ function Navbar({ sendDataToParent, sendDataToApp }) {
               </div>
             ) : (
               <div>
-                <div class="pushbutton" onClick={() => setModalActive2(true)}>
+                <div class="pushbutton" onClick={() => setModalActive3(true)}>
                   <img
                     src="./images/globe.svg"
                     className="push"
@@ -125,6 +128,13 @@ function Navbar({ sendDataToParent, sendDataToApp }) {
           </div>
         </div>
       </Notifications>
+      <LanguageModal active={modalActive3} setActive={setModalActive3}>
+      <LanguageMenu 
+       sendDataToParent={sendDataToParent}
+          sendDataToApp={sendDataToApp}
+          handleClick2={() => setModalActive(false)}
+          />
+      </LanguageModal>
     </nav>
   );
 }
