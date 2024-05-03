@@ -245,6 +245,31 @@
   height: 16px;
   width: 16px;
 }
+.ton_connect_button{
+  background-color: #ffffff;
+  color: black;
+  padding: 8px 18px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.ton_connect_button:hover{
+  background-color: #d1d1d1;
+  transform: scale(1.03)
+}
+.ton_connect_button div{
+  align-items: center;
+margin: 0 auto;
+font-size: 15px;
+padding-right: 8px;
+}
+.ton_connect_button img{
+  height: 30px;
+  width: 30px;
+}
 @media (max-width: 600px) {
   .push {
     height: 23px;
@@ -252,12 +277,21 @@
   }
 
   .logotxt {
-    margin-top: 10px;
-    font-size: 28px;
+    display:none;
   }
 
   .nav-list {
     row-gap: 10px;
     column-gap: 12px;
   }
+  .ton_connect_button{
+    padding: 9px 18px;
+  }
+  .ton_connect_button div{
+    font-size: 13px;
+    padding-right: 0px;
+    }
+    .ton_connect_button img{
+     display: none;
+    }
 }

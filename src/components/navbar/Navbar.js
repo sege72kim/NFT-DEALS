@@ -2,7 +2,7 @@ import "./style.css";
 import React, { useState, useEffect } from "react";
 import Notifications from "./notifications/notifications";
 import { FormattedMessage } from "react-intl";
-import { TonConnectButton } from "@tonconnect/ui-react";
+
 import { Link } from "react-router-dom";
 import { useTonWallet } from "@tonconnect/ui-react";
 import { useTonAddress } from "@tonconnect/ui-react";
@@ -11,7 +11,7 @@ import MenuModal from "./menu/menu_modal";
 import MenuProfile from "./menu/menu";
 import LanguageMenu from "./language_menu/language_menu";
 import LanguageModal from "./language_menu/language_modal";
-
+import { useTonConnectModal } from "@tonconnect/ui-react";
 function Navbar({ sendDataToParent, sendDataToApp }) {
   const userFriendlyAddress = useTonAddress();
   const [modalActive, setModalActive] = useState(false);
@@ -30,6 +30,7 @@ function Navbar({ sendDataToParent, sendDataToApp }) {
     };
   }, []);
   const wallet = useTonWallet();
+  const { open } = useTonConnectModal();
   return (
     <nav className="nav">
       <div className="container">
@@ -75,7 +76,13 @@ function Navbar({ sendDataToParent, sendDataToApp }) {
                 <img src="./images/menu-burger.svg" alt="" />
               </div>
             ) : (
-              <TonConnectButton />
+              <div>
+              
+              <div className="ton_connect_button"onClick={open}>
+              <img src="/images/ton_symbol.svg" alt="" />
+                <div>Connect wallet</div>
+              </div>
+              </div>
             )}
           </ul>
         </div>
