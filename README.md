@@ -1,70 +1,187 @@
-# Getting Started with Create React App
+# LOLZ Hamster NFT P2P Exchange
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the LOLZ Hamster NFT P2P Exchange repository! This is an official work-in-progress project for LOLZ Hamster, designed to provide a user-friendly frontend for a peer-to-peer (P2P) platform where users can exchange NFTs and tokens between TON Space cryptocurrency wallets.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Components](#components)
+  - [Registration Page](#registration-page)
+  - [Profile Page](#profile-page)
+  - [Main Page](#main-page)
+  - [DealsBlock](#dealsblock)
+  - [Navbar](#navbar)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The LOLZ Hamster NFT P2P Exchange is designed to facilitate the exchange of NFTs and tokens between users' TON Space wallets. The platform features two main pages: the main trading page and the user profile page. Each of these pages consists of various blocks to provide comprehensive functionality for the exchange process.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Main Trading Page**: Allows users to browse, list, and trade NFTs and tokens.
+- **User Profile Page**: Displays user information, transaction history, and other personal details.
+- **Registration Page**: Shown when a user is not connected to a TON Space wallet, guiding them through the connection process.
+- **Wallet Integration**: Seamless connection with TON Space cryptocurrency wallets using ton-connect.
+- **Routing**: Efficient navigation between different sections of the application using react-router-dom.
+- **Localization**: Multi-language support implemented with react-intl.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **HTML, CSS, JavaScript**: Core web technologies for building the frontend.
+- **React.js**: A JavaScript library for building user interfaces.
+- **ton-connect**: Library for connecting to TON Space cryptocurrency wallets.
+- **react-router-dom**: A library for routing in React applications.
+- **react-intl**: Internationalization and localization for React applications.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+NFT-DEX/
+├── node_modules/
+├── public/
+├── src/
+│   ├── App/
+│   ├── components/
+│   │   ├── mainPage/
+│   │   │   ├── dealsBlock/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── infoblock/
+│   │   │   │   │   │   └── info-block.js
+│   │   │   │   │   ├── nftBlock/
+│   │   │   │   │   │   ├── ListOfNFTs/
+│   │   │   │   │   │   │   └── listcomponent.js
+│   │   │   │   │   │   │   └── listitem.js
+│   │   │   │   │   │   └── nft-block.js
+│   │   │   │   │   └── nft-block.js
+│   │   │   │   ├── containers/
+│   │   │   │   │   └── DealsBlockMobile.js
+│   │   │   │   │   └── DealsBlockDesktope.js
+│   │   │   │   └── DealsBlock.js
+│   │   │   ├── header/
+│   │   │   │   └── Header.js
+│   │   ├── navbar/
+│   │   │   ├── menu/
+│   │   │   │   └── menu_modal.js
+│   │   │   │   └── menu.js
+│   │   │   │   └── menuitems.js
+│   │   │   ├── notifications/
+│   │   │   │   └── notification.js
+│   │   │   └── Navbar.js
+│   │   ├── profile/
+│   │   │   ├── hamsterBlock/
+│   │   │   │   └── hamsterBlock.js
+│   │   │   ├── historyBlock/
+│   │   │   │   └── historyBlock.js
+│   │   │   ├── jettonsBlock/
+│   │   │   │   └── JettonList.js
+│   │   │   ├── notificationsBlock/
+│   │   │   │   └── listNotifications.js
+│   │   │   ├── userinfoBlock/
+│   │   │   │   └── infoblick.js
+│   │   │   ├── userNftBlock/
+│   │   │   │   └── userNftBlock.js
+│   │   └── i18n/
+│   │   │   └── locales.js
+│   │   │   └── messages.js
+│   ├── pages/
+│   │   ├── main/
+│   │   │   ├── Main.js
+│   │   ├── profile/
+│   │   │   └── Profile.js
+│   │   └── registration/
+│   │       └── Registration.js
+│   ├── utils/
+│   └── index.js
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Components
 
-### `npm run eject`
+### Registration Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The Registration Page is shown when a user is not connected to a TON Space wallet. It guides users through the wallet connection process, ensuring they are set up correctly before accessing the platform's main features.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Profile Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The Profile Page includes various blocks, all of which are located in `src/components/profile`. While most styles for the blocks are already implemented, further details for transaction histories need to be refined. Additionally, backend integration, Dedust gadget, and HMSTR rate need to be incorporated. On the Profile Page, users can:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- View their personal information.
+- Check their transaction history.
+- View their NFTs and tokens.
+- Access their transaction history.
+- See notifications.
 
-## Learn More
+### Main Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Header**: Handles the top section with text and a live trade button.
+- **DealsBlock**: Manages the lower two blocks with information and modal windows.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+All components for the Main Page are located in `src/components/mainPage`.
 
-### Code Splitting
+#### DealsBlock
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The `DealsBlock` component is exported from `DealsBlock.js`, which dynamically selects between `DealsBlockMobile` and `DealsBlockDesktop` based on the user's device. These are located in `src/components/mainPage/dealsblock/containers`.
 
-### Analyzing the Bundle Size
+Inside `src/components/mainPage/dealsblock/components`, you'll find:
+- `infoblock`: Manages the top two information blocks.
+- `nftblock`: Handles the modals that perform core functionality.
+- `listofnfts`: Contains the internal contents of the NFT modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Navbar
 
-### Making a Progressive Web App
+The navigation bar is essentially the header, located in `src/components/navbar`. If the wallet is not connected, the Navbar will show the default `TonConnectButton` along with the `language_menu`. Once the wallet is connected, it will display `src/components/navbar/menu/menu.js`, which includes buttons for:
+- Copying address
+- Profile navigation
+- Language selection
+- Customization
+- Logout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For localization, the language files are in `src/i18n`. To configure localization, you can find the highlight settings in `src/pages/main/main.js` inside `<div className="background_light">`.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+We welcome contributions to the LOLZ Hamster NFT P2P Exchange! To contribute, please follow these steps:
 
-### Deployment
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with clear and descriptive messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Please ensure your code adheres to our coding standards and passes all tests.
 
-### `npm run build` fails to minify
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Follow these steps to set up the project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone [https://github.com/sege72kim/NFT-DEALS-main.git]
+   cd NFT-DEALS-main
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+
+The application will be available at `http://localhost:3000`.
+
+## IMPORTANT
+---
+
+This README provides a comprehensive overview of the LOLZ Hamster NFT P2P Exchange project, detailing its features, technologies used, installation steps, usage instructions, project structure, and component details. Please note that this is an official working project for LOLZ Hamster, not a personal or pet project, and is currently in development. The Registration Page must be completed before accessing other parts of the platform.
