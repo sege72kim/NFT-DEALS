@@ -7,7 +7,6 @@ Welcome to the LOLZ Hamster NFT P2P Exchange repository! This is an official wor
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Components](#components)
   - [Registration Page](#registration-page)
@@ -15,6 +14,7 @@ Welcome to the LOLZ Hamster NFT P2P Exchange repository! This is an official wor
   - [Main Page](#main-page)
   - [DealsBlock](#dealsblock)
   - [Navbar](#navbar)
+- [Installation](#installation)
 - [IMPORTANT](#IMPORTANT)
 
 ## Introduction
@@ -144,18 +144,6 @@ The navigation bar is essentially the header, located in `src/components/navbar`
 - Logout
 
 For localization, the language files are in `src/i18n`. To configure localization, you can find the highlight settings in `src/pages/main/main.js` inside `<div className="background_light">`.
-
-## Contributing
-
-We welcome contributions to the LOLZ Hamster NFT P2P Exchange! To contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Make your changes and commit them with clear and descriptive messages.
-4. Push your changes to your forked repository.
-5. Create a pull request to the main repository.
-
-Please ensure your code adheres to our coding standards and passes all tests.
 
 ## Installation
 
