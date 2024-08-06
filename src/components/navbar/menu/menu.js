@@ -105,19 +105,19 @@ function MenuProfile({ sendDataToParent, sendDataToApp, handleClick2 }) {
             <MenuItem text="Return" image="./images/cross.svg" />
           </div>
           <div onClick={sendData1}>
-            <MenuItem text="English" image="./images/language.svg" />
+            <MenuItem text="Custom 1" image="./images/custom.svg" />
           </div>
           <div onClick={sendData2}>
-            <MenuItem text="Russian" image="./images/language.svg" />
+            <MenuItem text="Custom 2" image="./images/custom.svg" />
           </div>
           <div onClick={sendData3}>
-            <MenuItem text="中国人" image="./images/language.svg" />
+            <MenuItem text="Custom 3" image="./images/custom.svg" />
           </div>
           <div onClick={sendData4}>
-            <MenuItem text="Español" image="./images/language.svg" />
+            <MenuItem text="Custom 4" image="./images/custom.svg" />
           </div>
           <div onClick={sendData5}>
-            <MenuItem text="한국인" image="./images/language.svg" />
+            <MenuItem text="Custom 5" image="./images/custom.svg" />
           </div>
         </div>
       )}
