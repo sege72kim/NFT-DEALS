@@ -8,7 +8,6 @@ Welcome to the LOLZ Hamster NFT P2P Exchange repository! This is an official wor
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Components](#components)
   - [Registration Page](#registration-page)
@@ -16,8 +15,7 @@ Welcome to the LOLZ Hamster NFT P2P Exchange repository! This is an official wor
   - [Main Page](#main-page)
   - [DealsBlock](#dealsblock)
   - [Navbar](#navbar)
-- [Contributing](#contributing)
-- [License](#license)
+- [IMPORTANT](#IMPORTANT)
 
 ## Introduction
 
